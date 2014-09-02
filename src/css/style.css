@@ -699,18 +699,19 @@ textarea {
   z-index: 10;
   overflow: hidden;
   background-color: white;
+  box-shadow: 0 8px 4px -8px #303030;
   -webkit-transition: height ease 0.5s;
   -moz-transition: height ease 0.5s;
   -ms-transition: height ease 0.5s;
   -o-transition: height ease 0.5s;
   transition: height ease 0.5s; }
-  /* line 20, ../scss/layout/_header.scss */
+  /* line 21, ../scss/layout/_header.scss */
   .l-header .header-wrapper {
     width: 80%;
     height: 100%;
     margin: 0 auto;
     position: relative; }
-  /* line 27, ../scss/layout/_header.scss */
+  /* line 28, ../scss/layout/_header.scss */
   .l-header .link-home, .l-header nav {
     top: 50%;
     position: relative;
@@ -719,21 +720,21 @@ textarea {
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     transform: translateY(-50%); }
-  /* line 31, ../scss/layout/_header.scss */
+  /* line 32, ../scss/layout/_header.scss */
   .l-header .link-home {
     width: 9em;
     float: left;
     position: absolute; }
-    /* line 36, ../scss/layout/_header.scss */
+    /* line 37, ../scss/layout/_header.scss */
     .l-header .link-home img {
       max-width: 100%;
       width: 100%;
       height: auto; }
-  /* line 43, ../scss/layout/_header.scss */
+  /* line 44, ../scss/layout/_header.scss */
   .l-header nav {
     float: right;
     height: 100%; }
-    /* line 66, ../scss/layout/_header.scss */
+    /* line 67, ../scss/layout/_header.scss */
     .l-header nav a {
       display: inline-block;
       font-family: "Open Sans", sans-serif;
@@ -745,7 +746,7 @@ textarea {
       text-decoration: none;
       line-height: 6rem;
       background-color: white; }
-      /* line 78, ../scss/layout/_header.scss */
+      /* line 79, ../scss/layout/_header.scss */
       .l-header nav a:before {
         left: 0;
         bottom: 0;
@@ -756,10 +757,10 @@ textarea {
         position: absolute;
         transition: width .5s ease;
         -webkit-backface-visibility: hidden; }
-      /* line 91, ../scss/layout/_header.scss */
+      /* line 92, ../scss/layout/_header.scss */
       .l-header nav a:hover:before {
         width: 100%; }
-      /* line 95, ../scss/layout/_header.scss */
+      /* line 96, ../scss/layout/_header.scss */
       .l-header nav a.clicked:before {
         left: 0;
         bottom: 0;
@@ -769,13 +770,13 @@ textarea {
         content: '';
         position: absolute; }
 
-/* line 108, ../scss/layout/_header.scss */
+/* line 109, ../scss/layout/_header.scss */
 .header-small {
   height: 4.61538rem; }
-  /* line 111, ../scss/layout/_header.scss */
+  /* line 112, ../scss/layout/_header.scss */
   .header-small .link-home {
     width: 6em; }
-  /* line 115, ../scss/layout/_header.scss */
+  /* line 116, ../scss/layout/_header.scss */
   .header-small nav a {
     line-height: 4.61538rem; }
 
@@ -920,7 +921,7 @@ textarea {
     z-index: -1;
     content: '';
     display: block;
-    background-color: #9fb100;
+    background-color: #303030;
     position: absolute;
     left: 0;
     width: 0;
