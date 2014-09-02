@@ -1,0 +1,120 @@
+/* ==|====================
+   Layout/Header
+   ======================= */
+
+$header-height: 6rem;
+
+.l-header {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: $header-height;
+	position: fixed;
+	z-index: 10;
+	overflow: hidden;
+
+	background-color: white;
+
+	@include transition(height ease .5s);
+
+	.header-wrapper {
+		width: 80%;
+		height: 100%;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	.link-home, nav {
+		@include vertical-center;
+	}
+
+	.link-home {
+		width: 9em;
+		float: left;
+		position: absolute;
+
+		img {
+			max-width: 100%;
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	nav {
+		float: right;
+		height: 100%;
+
+		// a {
+		// 	display: inline-block;
+		// 	height: 100%;
+		// 	padding: 0 .7em;
+		// 	color: black;
+		// 	font-family: $font1;
+		// 	line-height: $header-height;
+		// 	font-size: 1.3em;
+		// 	font-weight: 700;
+		// 	text-transform: uppercase;
+
+		// 	&:last-child {
+		// 		padding-right: 0;
+		// 	}
+
+		// 	&:hover {
+		// 		color: grey;
+		// 	}
+		// }
+		a {
+		  display: inline-block;
+		  font-family: $font1;
+		  font-size: 1.3em;
+		  margin: 0 .7em;
+			font-weight: 700;
+		  position: relative;
+		  color: $black;
+		  text-decoration: none;
+		  line-height: $header-height;
+		  background-color: white;
+		  
+		  &:before {
+		    left: 0;
+		    bottom: 0;
+		    width: 0;
+		    height: .3em;
+		    background: $green;
+		    content: '';
+		    position: absolute;
+		    transition: width .5s ease;
+		    //Prevent to let artifacts after animation
+		    -webkit-backface-visibility: hidden
+		  }
+		  
+		  &:hover:before {
+		    width: 100%;
+		  }
+
+		  &.clicked:before {
+				left: 0;
+		    bottom: 0;
+		    width: 100%;
+		    height: .3em;
+		    background: $black;
+		    content: '';
+		    position: absolute;
+			}
+		}
+	}
+}
+
+.header-small {
+		height: ($header-height/1.3);
+
+	&	.link-home {
+		width: 6em;
+	}
+
+	& nav a {
+		line-height: $header-height/1.3;
+	}
+}
+
+	

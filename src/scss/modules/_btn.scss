@@ -1,0 +1,43 @@
+/* =======================
+   Module/Button
+   ======================= */
+
+.btn {
+	z-index: 1;
+  position: relative;
+  height: 3em;
+  width: 15em;
+  display: block;
+  
+  border: .3em solid $black;
+  
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 3em;
+  font-size: 1.3em;
+  font-family: $font3;
+
+  font-weight: 700;
+  color: $black;
+  
+  &:before {
+    z-index: -1;
+    content:'';
+    display: block;
+    background-color: $green;
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 100%;
+    @include transition(width .3s ease);
+  }
+  
+  &:hover {
+    color: white;
+    
+    &:before {
+      width: 100%;
+    }
+  }
+}

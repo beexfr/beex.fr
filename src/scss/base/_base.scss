@@ -1,0 +1,60 @@
+/* ===========================
+   Base
+   =========================== */
+
+html, body { height: 100%; }
+
+body {
+    font-family: 'Open Sans';
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 1.5;
+    background-image: url('../img/bg/bg.png');
+}
+
+.container{
+    width: 80%; 
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+canvas {
+    display: block;
+}
+
+a {
+    color: $color-link;
+    text-decoration: none;
+    @include transition();
+
+    &:hover {
+        color: $color-link-hover;
+    }
+}
+
+p {
+    font-family: $font1;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 { margin: 0; }
+
+::-moz-selection {
+    background: $black;
+    color: #fff;
+    text-shadow: none;
+}
+::selection {
+    background: $black;
+    color: #fff;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}

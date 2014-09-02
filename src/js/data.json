@@ -1,0 +1,46 @@
+{  
+   "sentences":[  
+      {  
+         "title":"Chez Beex nous créons",
+         "texts":[  
+            {  
+               "text":"des supers programmes"
+            },
+            {  
+               "text":"des longues suites de 0 et de 1"
+            },
+            {  
+               "text":"le monde de demain"
+            }
+         ]
+      },
+      {  
+         "title":"Chez Beex nous aimons",
+         "texts":[  
+            {  
+               "text":"la big data"
+            },
+            {  
+               "text":"développer des applications ergonomiques, simples et sur mesure"
+            },
+            {  
+               "text":"chorégraphier des services et orchestrer de la donnée"
+            }
+         ]
+      },
+      {  
+         "title":"Chez Beex nous mangeons",
+         "texts":[  
+            {  
+               "text":"des prunes"
+            },
+            {  
+               "text":"des ananas"
+            },
+            {  
+               "text":"des bonbons"
+            }
+         ]
+      }
+   ]
+}
