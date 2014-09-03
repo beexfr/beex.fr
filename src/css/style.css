@@ -854,11 +854,11 @@ textarea {
   .find:after, .meet:after, .collaborate:after {
     clear: both; }
   /* line 19, ../scss/layout/_contact.scss */
-  .find .text-wrapper, .meet .text-wrapper, .collaborate .text-wrapper {
+  .find .half, .meet .half, .collaborate .half {
     width: 50%; }
   /* line 23, ../scss/layout/_contact.scss */
   .find h3, .meet h3, .collaborate h3 {
-    font-size: 3em;
+    font-size: 2.7em;
     margin: 0; }
     /* line 27, ../scss/layout/_contact.scss */
     .find h3:after, .meet h3:after, .collaborate h3:after {
@@ -877,24 +877,32 @@ textarea {
   .find img, .meet img, .collaborate img {
     margin: auto;
     position: absolute;
+    display: block;
     top: 0;
     bottom: 0;
+    right: 0;
+    left: 0;
     width: 20em;
-    opacity: .6; }
+    opacity: .8; }
 
-/* line 54, ../scss/layout/_contact.scss */
+/* line 57, ../scss/layout/_contact.scss */
 .even .text-wrapper {
   float: right; }
-/* line 58, ../scss/layout/_contact.scss */
-.even img {
-  left: 8em; }
+/* line 61, ../scss/layout/_contact.scss */
+.even .image-wrapper {
+  float: left; }
 
-/* line 64, ../scss/layout/_contact.scss */
+/* line 67, ../scss/layout/_contact.scss */
 .odd .text-wrapper {
   float: left; }
-/* line 68, ../scss/layout/_contact.scss */
-.odd img {
-  right: 8em; }
+/* line 71, ../scss/layout/_contact.scss */
+.odd .image-wrapper {
+  float: right; }
+
+/* line 76, ../scss/layout/_contact.scss */
+.image-wrapper {
+  height: 20em;
+  position: relative; }
 
 /* Modules */
 /* =======================
