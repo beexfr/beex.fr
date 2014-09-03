@@ -1,3 +1,5 @@
 ajouter scroll spy au menu item
-changer width du menu au scroll
 date footer js
+
+Anim au scroll
+Commencer Responsive

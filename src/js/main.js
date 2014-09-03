@@ -19,27 +19,9 @@ if( !window.location.hash && window.addEventListener ){
 }
 
 
+// Sentences
+
 (function($){
-
-    // Smooth Scroll Ancor
-    $('a[href*=#]:not([href=#])').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
-            || location.hostname == this.hostname) {
-
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-               if (target.length) {
-                 $('html,body').animate({
-                     scrollTop: target.offset().top - ($('#l-header').height()/1.3)
-                }, 1000);
-                return false;
-            }
-        }
-    });
-
-            // console.log($('#l-header').attr('class','header-small').height()/1.3);
-
-    // Sentences
     
     //Start ajax request
     $.ajax({
@@ -66,12 +48,9 @@ if( !window.location.hash && window.addEventListener ){
                         display: 'block', 
                         duration: animationDuration
                     })
-                    // .velocity('reverse', { display: 'none' });
                 $(div).find('.text')
                     .blast({ delimiter: "word" })
                     .velocity('transition.fadeIn', {
-                        // display: 'block',
-                        // duration: animationDuration,
                             delay: animationDuration,
                             duration: animationDuration,
                             stagger: 150,
@@ -138,11 +117,67 @@ var cbpAnimatedHeader = (function() {
      
 })();
 
-var menu_item = $('#nav').children();
-var contact_child = $('#contact').children();
-menu_item.click(function () {
-    contact_child.addClass('is-focused');
-})
+//Toggle Velocity Animation When Element Is In Viewport
+
+// var contact_child = $('#contact').children(),
+//     find = $('#find'),
+//     meet = $('#meet'),
+//     collaborate = $('#collaborate');
+
+// find.appear();
+// find.on('appear', function() {
+//     // console.log('lol');
+//     $(this).velocity('transition.slideLeftBigIn', {
+//         duration: 600
+//     });
+// });
+
+var find_txt = $('#find').find('#text-wrapper'),
+    find_img = $('#find').find('#image-wrapper'),
+    meet_txt = $('#meet').find('#text-wrapper'),
+    meet_img = $('#meet').find('#image-wrapper'),
+    collaborate_txt = $('#collaborate').find('#text-wrapper'),
+    collaborate_img = $('#collaborate').find('#image-wrapper');
+
+//Find Section
+$('#l-main').waypoint(function() {
+  find_txt.velocity('transition.slideLeftBigIn', {
+    duration: 1000,
+    delay: 300
+  });
+  find_img.velocity('transition.slideRightBigIn', {
+    duration: 1000,
+    delay: 300
+  });
+  $(this).waypoint('destroy');
+});
+
+//Meet Section
+$('#find').waypoint(function() {
+  meet_txt.velocity('transition.slideRightBigIn', {
+    duration: 1000,
+    delay: 300
+  });
+  meet_img.velocity('transition.slideLeftBigIn', {
+    duration: 1000,
+    delay: 300
+  });
+  $(this).waypoint('destroy');
+});
+
+//Collaborate Section
+$('#meet').waypoint(function() {
+  collaborate_txt.velocity('transition.slideLeftBigIn', {
+    duration: 1000,
+    delay: 300
+  });
+  collaborate_img.velocity('transition.slideRightBigIn', {
+    duration: 1000,
+    delay: 300
+  });
+  $(this).waypoint('destroy');
+});
+
 
 
     
