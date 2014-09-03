@@ -178,6 +178,9 @@ $('#meet').waypoint(function() {
   $(this).waypoint('destroy');
 });
 
+//Dynamic Year in Footer
+$('#year').text(new Date().getFullYear());
+
 
 
     

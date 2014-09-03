@@ -1,5 +1,4 @@
 ajouter scroll spy au menu item
-date footer js
 
 Anim au scroll
 Commencer Responsive
