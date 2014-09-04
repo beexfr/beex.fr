@@ -119,64 +119,48 @@ var cbpAnimatedHeader = (function() {
 
 //Toggle Velocity Animation When Element Is In Viewport
 
-// var contact_child = $('#contact').children(),
-//     find = $('#find'),
-//     meet = $('#meet'),
-//     collaborate = $('#collaborate');
-
-// find.appear();
-// find.on('appear', function() {
-//     // console.log('lol');
-//     $(this).velocity('transition.slideLeftBigIn', {
-//         duration: 600
-//     });
-// });
-
-var find_txt = $('#find').find('#text-wrapper'),
-    find_img = $('#find').find('#image-wrapper'),
-    meet_txt = $('#meet').find('#text-wrapper'),
-    meet_img = $('#meet').find('#image-wrapper'),
-    collaborate_txt = $('#collaborate').find('#text-wrapper'),
-    collaborate_img = $('#collaborate').find('#image-wrapper');
+var find_txt = $('#find_txt'),
+    find_img = $('#find_img'),
+    meet_txt = $('#meet_txt'),
+    meet_img = $('#meet_img'),
+    collaborate_txt = $('#collaborate_txt'),
+    collaborate_img = $('#collaborate_img');
 
 //Find Section
-$('#l-main').waypoint(function() {
-  find_txt.velocity('transition.slideLeftBigIn', {
-    duration: 1000,
-    delay: 300
+$('#find').waypoint(function() {
+  find_txt.velocity({
+    opacity: [1,0.2],
+    duration: 4000
   });
   find_img.velocity('transition.slideRightBigIn', {
-    duration: 1000,
-    delay: 300
+    duration: 1000
   });
-  $(this).waypoint('destroy');
-});
+  $(this).waypoint('disable');
+}, { offset: '60%' });
 
 //Meet Section
-$('#find').waypoint(function() {
-  meet_txt.velocity('transition.slideRightBigIn', {
-    duration: 1000,
-    delay: 300
+$('#meet').waypoint(function() {
+  meet_txt.velocity({
+    opacity: [1,0.2],
+    duration: 4000
   });
   meet_img.velocity('transition.slideLeftBigIn', {
-    duration: 1000,
-    delay: 300
+    duration: 1000
   });
-  $(this).waypoint('destroy');
-});
+  $(this).waypoint('disable');
+}, { offset: '35%' });
 
 //Collaborate Section
-$('#meet').waypoint(function() {
-  collaborate_txt.velocity('transition.slideLeftBigIn', {
-    duration: 1000,
-    delay: 300
+$('#collaborate').waypoint(function() {
+  collaborate_txt.velocity({
+    opacity: [1,0.2],
+    duration: 4000
   });
   collaborate_img.velocity('transition.slideRightBigIn', {
-    duration: 1000,
-    delay: 300
+    duration: 1000
   });
-  $(this).waypoint('destroy');
-});
+  $(this).waypoint('disable');
+}, { offset: '35%' });
 
 //Dynamic Year in Footer
 $('#year').text(new Date().getFullYear());

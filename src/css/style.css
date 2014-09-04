@@ -745,9 +745,8 @@ textarea {
       position: relative;
       color: #303030;
       text-decoration: none;
-      line-height: 6rem;
-      background-color: white; }
-      /* line 79, ../scss/layout/_header.scss */
+      line-height: 6rem; }
+      /* line 78, ../scss/layout/_header.scss */
       .l-header nav a:before {
         left: 0;
         bottom: 0;
@@ -758,26 +757,26 @@ textarea {
         position: absolute;
         transition: width .5s ease;
         -webkit-backface-visibility: hidden; }
-      /* line 92, ../scss/layout/_header.scss */
+      /* line 91, ../scss/layout/_header.scss */
       .l-header nav a:hover:before {
         width: 100%; }
-      /* line 96, ../scss/layout/_header.scss */
+      /* line 95, ../scss/layout/_header.scss */
       .l-header nav a.clicked:before {
         left: 0;
         bottom: 0;
         width: 100%;
         height: .3em;
-        background: #303030;
+        background: #9fb100;
         content: '';
         position: absolute; }
 
-/* line 109, ../scss/layout/_header.scss */
+/* line 108, ../scss/layout/_header.scss */
 .header-small {
   height: 4.61538rem; }
-  /* line 112, ../scss/layout/_header.scss */
+  /* line 111, ../scss/layout/_header.scss */
   .header-small .link-home {
     width: 6em; }
-  /* line 116, ../scss/layout/_header.scss */
+  /* line 115, ../scss/layout/_header.scss */
   .header-small nav a {
     line-height: 4.61538rem; }
 
@@ -791,10 +790,10 @@ textarea {
 .l-footer {
   text-align: center;
   margin: 2em 0; }
-  /* line 10, ../scss/layout/_footer.scss */
+  /* line 12, ../scss/layout/_footer.scss */
   .l-footer img {
     width: 4em; }
-  /* line 14, ../scss/layout/_footer.scss */
+  /* line 16, ../scss/layout/_footer.scss */
   .l-footer p {
     font-size: 1em;
     margin: 0; }
@@ -840,7 +839,7 @@ textarea {
 /* line 11, ../scss/layout/_contact.scss */
 .find, .meet, .collaborate {
   width: 94%;
-  padding: 5% 3%;
+  padding: 4% 3%;
   position: relative;
   background-color: #fff; }
   /* line 28, ../scss/tools/_mixins.scss */
@@ -900,6 +899,10 @@ textarea {
   float: right; }
 
 /* line 76, ../scss/layout/_contact.scss */
+.text-wrapper {
+  opacity: 0.2; }
+
+/* line 80, ../scss/layout/_contact.scss */
 .image-wrapper {
   height: 20em;
   position: relative; }

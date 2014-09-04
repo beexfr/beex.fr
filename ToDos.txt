@@ -1,4 +1,3 @@
 ajouter scroll spy au menu item
 
-Anim au scroll
 Commencer Responsive

@@ -10,7 +10,7 @@
 
 .find, .meet, .collaborate {
 	width: 94%;
-	padding: 5% 3%;
+	padding: 4% 3%;
 	position: relative;
 	background-color: #fff;
 	//To keep floating elements inside their parents we use clearfix mixin
@@ -71,6 +71,10 @@
 	.image-wrapper {
 		float: right;
 	}
+}
+
+.text-wrapper {
+	opacity: 0.2;
 }
 
 .image-wrapper {
