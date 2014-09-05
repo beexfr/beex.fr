@@ -73,6 +73,32 @@
 	}
 }
 
+.btn-wrapper {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+
+	p {
+		margin: 0;
+		display: inline-block;
+		width: 10%;
+		text-align: center;
+		font-size: 1.3em;
+	}
+
+	.new-btn-wrapper {
+		right: 100%;
+		top: 0;
+		width: 100%;
+		position: absolute;
+	}
+
+	.btn-clicked {
+		width: 40%;
+		display: inline-block;
+	}
+}
+
 .text-wrapper {
 	opacity: 0.2;
 }
@@ -80,7 +106,6 @@
 .image-wrapper {
 	height: 20em;
 	position: relative;
-	// background-color: tomato;
 }
 
 

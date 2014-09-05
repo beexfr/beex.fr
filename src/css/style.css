@@ -790,10 +790,10 @@ textarea {
 .l-footer {
   text-align: center;
   margin: 2em 0; }
-  /* line 12, ../scss/layout/_footer.scss */
+  /* line 10, ../scss/layout/_footer.scss */
   .l-footer img {
     width: 4em; }
-  /* line 16, ../scss/layout/_footer.scss */
+  /* line 14, ../scss/layout/_footer.scss */
   .l-footer p {
     font-size: 1em;
     margin: 0; }
@@ -899,10 +899,33 @@ textarea {
   float: right; }
 
 /* line 76, ../scss/layout/_contact.scss */
+.btn-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative; }
+  /* line 81, ../scss/layout/_contact.scss */
+  .btn-wrapper p {
+    margin: 0;
+    display: inline-block;
+    width: 10%;
+    text-align: center;
+    font-size: 1.3em; }
+  /* line 89, ../scss/layout/_contact.scss */
+  .btn-wrapper .new-btn-wrapper {
+    right: 100%;
+    top: 0;
+    width: 100%;
+    position: absolute; }
+  /* line 96, ../scss/layout/_contact.scss */
+  .btn-wrapper .btn-clicked {
+    width: 40%;
+    display: inline-block; }
+
+/* line 102, ../scss/layout/_contact.scss */
 .text-wrapper {
   opacity: 0.2; }
 
-/* line 80, ../scss/layout/_contact.scss */
+/* line 106, ../scss/layout/_contact.scss */
 .image-wrapper {
   height: 20em;
   position: relative; }

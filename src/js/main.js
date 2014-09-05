@@ -19,10 +19,66 @@ if( !window.location.hash && window.addEventListener ){
 }
 
 
-// Sentences
+
 
 (function($){
+
+    //----------------
+    // Animated Header
+    //----------------
+
+    var cbpAnimatedHeader = (function() {
+     
+        var docElem = document.documentElement,
+            header = $('#l-header'),
+            contact_link = $('#nav').find('a'),
+            contact_link_before = $('#nav a::before'),
+            didScroll = false,
+            changeHeaderOn = 300;
+     
+        function init() {
+            window.addEventListener( 'scroll', function( event ) {
+                if( !didScroll ) {
+                    didScroll = true;
+                    setTimeout( scrollPage, 250 );
+                }
+            }, false );
+        }
+     
+        function scrollPage() {
+            var sy = scrollY();
+            if ( sy >= changeHeaderOn ) {
+                header.addClass('header-small');
+            }
+            else {
+                header.removeClass('header-small');
+            }
+            didScroll = false;
+        }
+     
+        function scrollY() {
+            return window.pageYOffset || docElem.scrollTop;
+        }
+     
+        init();
+
+        //Add Class on Click
+        $('a').mouseenter(function() {
+          $('nav > a').removeClass('clicked');
+        })
+
+        //Remove Class on Hover
+        $('a').click(function() {
+          $("nav > a").removeClass('clicked');
+          $(this).toggleClass('clicked');
+        })
+         
+    })();
     
+    //----------
+    // Sentences
+    //----------
+
     //Start ajax request
     $.ajax({
         url: "src/js/data.json",
@@ -65,107 +121,10 @@ if( !window.location.hash && window.addEventListener ){
             setInterval(changeSentence, animationDuration * 3);
         }
     });
-      
-})(jQuery);
-
-// Animated Header
-var cbpAnimatedHeader = (function() {
- 
-    var docElem = document.documentElement,
-        header = $('#l-header'),
-        contact_link = $('#nav').find('a'),
-        contact_link_before = $('#nav a::before'),
-        didScroll = false,
-        changeHeaderOn = 300;
- 
-    function init() {
-        window.addEventListener( 'scroll', function( event ) {
-            if( !didScroll ) {
-                didScroll = true;
-                setTimeout( scrollPage, 250 );
-            }
-        }, false );
-    }
- 
-    function scrollPage() {
-        var sy = scrollY();
-        if ( sy >= changeHeaderOn ) {
-            header.addClass('header-small');
-        }
-        else {
-            header.removeClass('header-small');
-        }
-        didScroll = false;
-    }
- 
-    function scrollY() {
-        return window.pageYOffset || docElem.scrollTop;
-    }
- 
-    init();
-
-    //Add Class on Click
-    $('a').mouseenter(function() {
-      $('nav > a').removeClass('clicked');
-    })
-
-    //Remove Class on Hover
-    $('a').click(function() {
-      $("nav > a").removeClass('clicked');
-      $(this).toggleClass('clicked');
-    })
-     
-})();
-
-//Toggle Velocity Animation When Element Is In Viewport
-
-var find_txt = $('#find_txt'),
-    find_img = $('#find_img'),
-    meet_txt = $('#meet_txt'),
-    meet_img = $('#meet_img'),
-    collaborate_txt = $('#collaborate_txt'),
-    collaborate_img = $('#collaborate_img');
-
-//Find Section
-$('#find').waypoint(function() {
-  find_txt.velocity({
-    opacity: [1,0.2],
-    duration: 4000
-  });
-  find_img.velocity('transition.slideRightBigIn', {
-    duration: 1000
-  });
-  $(this).waypoint('disable');
-}, { offset: '60%' });
-
-//Meet Section
-$('#meet').waypoint(function() {
-  meet_txt.velocity({
-    opacity: [1,0.2],
-    duration: 4000
-  });
-  meet_img.velocity('transition.slideLeftBigIn', {
-    duration: 1000
-  });
-  $(this).waypoint('disable');
-}, { offset: '35%' });
-
-//Collaborate Section
-$('#collaborate').waypoint(function() {
-  collaborate_txt.velocity({
-    opacity: [1,0.2],
-    duration: 4000
-  });
-  collaborate_img.velocity('transition.slideRightBigIn', {
-    duration: 1000
-  });
-  $(this).waypoint('disable');
-}, { offset: '35%' });
-
-
-//ScrollSpy
-(function($){
-
+    
+    //---------
+    //ScrollSpy
+    //---------
     var sections = [],
         id = false,
         nav = $('#nav'),
@@ -181,7 +140,7 @@ $('#collaborate').waypoint(function() {
     //Half viewport because this is the point where we choose wether or not to style our links.
     $(window).scroll(function(e){
         var scrollTop = $(this).scrollTop() + ($(window).height() / 2);
-        console.log(scrollTop);
+        // console.log(scrollTop);
 
         //Now we have to compare the value of the scrollTop to the top distance of our links
         for(var i in sections){
@@ -203,11 +162,82 @@ $('#collaborate').waypoint(function() {
             console.log('Menu change pour : ' + id);
         }
     });
-    
+
+    //---------------------
+    //Button Mail Animation
+    //---------------------
+    var btn_mail = $('#btn-mail'),
+        new_btn_wrapper = $('#new-btn-wrapper');
+
+    btn_mail.click(function(e){
+        e.preventDefault();
+        $(this).velocity({
+            left: '100%',
+            duration: 500
+        });
+        $(new_btn_wrapper).velocity({
+            right: '0%',
+            duration: 500
+        },{
+            delay: 500
+        });
+    });
+
+    //-----------------------------------------------------
+    //Toggle Velocity Animation When Element Is In Viewport
+    //-----------------------------------------------------
+    var find_txt = $('#find_txt'),
+        find_img = $('#find_img'),
+        meet_txt = $('#meet_txt'),
+        meet_img = $('#meet_img'),
+        collaborate_txt = $('#collaborate_txt'),
+        collaborate_img = $('#collaborate_img');
+
+    //Find Section
+    $('#find').waypoint(function() {
+      find_txt.velocity({
+        opacity: [1,0.2],
+        duration: 4000
+      });
+      find_img.velocity('transition.slideRightBigIn', {
+        duration: 1000
+      });
+      $(this).waypoint('disable');
+    }, { offset: '60%' });
+
+    //Meet Section
+    $('#meet').waypoint(function() {
+      meet_txt.velocity({
+        opacity: [1,0.2],
+        duration: 4000
+      });
+      meet_img.velocity('transition.slideLeftBigIn', {
+        duration: 1000
+      });
+      $(this).waypoint('disable');
+    }, { offset: '35%' });
+
+    //Collaborate Section
+    $('#collaborate').waypoint(function() {
+      collaborate_txt.velocity({
+        opacity: [1,0.2],
+        duration: 4000
+      });
+      collaborate_img.velocity('transition.slideRightBigIn', {
+        duration: 1000
+      });
+      $(this).waypoint('disable');
+    }, { offset: '35%' });
+
+    //----------------------
+    //Dynamic Year in Footer
+    //----------------------
+    $('#year').text(new Date().getFullYear());
+      
 })(jQuery);
 
-//Dynamic Year in Footer
-$('#year').text(new Date().getFullYear());
+
+
 
 
 
