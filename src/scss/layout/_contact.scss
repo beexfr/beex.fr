@@ -86,6 +86,10 @@
 		font-size: 1.3em;
 	}
 
+	.btn-mail {
+		-webkit-backface-visibility: hidden;
+	}
+
 	.new-btn-wrapper {
 		right: 100%;
 		top: 0;

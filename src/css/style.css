@@ -911,21 +911,24 @@ textarea {
     text-align: center;
     font-size: 1.3em; }
   /* line 89, ../scss/layout/_contact.scss */
+  .btn-wrapper .btn-mail {
+    -webkit-backface-visibility: hidden; }
+  /* line 93, ../scss/layout/_contact.scss */
   .btn-wrapper .new-btn-wrapper {
     right: 100%;
     top: 0;
     width: 100%;
     position: absolute; }
-  /* line 96, ../scss/layout/_contact.scss */
+  /* line 100, ../scss/layout/_contact.scss */
   .btn-wrapper .btn-clicked {
     width: 40%;
     display: inline-block; }
 
-/* line 102, ../scss/layout/_contact.scss */
+/* line 106, ../scss/layout/_contact.scss */
 .text-wrapper {
   opacity: 0.2; }
 
-/* line 106, ../scss/layout/_contact.scss */
+/* line 110, ../scss/layout/_contact.scss */
 .image-wrapper {
   height: 20em;
   position: relative; }
