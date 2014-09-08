@@ -166,22 +166,36 @@ if( !window.location.hash && window.addEventListener ){
     //---------------------
     //Button Mail Animation
     //---------------------
-    var btn_mail = $('#btn-mail'),
-        new_btn_wrapper = $('#new-btn-wrapper');
 
-    btn_mail.click(function(e){
+    $('#btn-mail-meet').click(function(e){
         e.preventDefault();
         $(this).velocity({
             left: '100%',
             duration: 500
         });
-        $(new_btn_wrapper).velocity({
+        $('#new-btn-wrapper-meet').velocity({
             right: '0%',
             duration: 500
         },{
             delay: 500
         });
     });
+
+    $('#btn-mail-recrut').click(function(e){
+        e.preventDefault();
+        $(this).velocity({
+            left: '100%',
+            duration: 500
+        });
+        $('#new-btn-wrapper-recrut').velocity({
+            right: '0%',
+            duration: 500
+        },{
+            delay: 500
+        });
+    });
+
+
 
     //-----------------------------------------------------
     //Toggle Velocity Animation When Element Is In Viewport
@@ -228,6 +242,32 @@ if( !window.location.hash && window.addEventListener ){
       });
       $(this).waypoint('disable');
     }, { offset: '35%' });
+
+    //-----------------
+    //Copy To Clipboard
+    //-----------------
+    var path_swf = 'src/flash/jquery.clipboard.swf';
+    console.log($('#btn-mail-recrut').text());
+
+    $('#copy-meet').clipboard({
+        path: path_swf,
+        copy: function() {
+            $('#meet-copied').append($('#btn-mail-meet').text()).velocity('transition.slideUpOut', {
+                duration: 4000
+            });
+            return ($('#btn-mail-meet').text());
+        }
+    });
+
+    $('#copy-recrut').clipboard({
+        path: path_swf,
+        copy: function() {
+            $('#recrut-copied').append($('#btn-mail-recrut').text()).velocity('transition.slideUpOut', {
+                duration: 4000
+            });
+            return ($('#btn-mail-recrut').text());
+        }
+    });
 
     //----------------------
     //Dynamic Year in Footer

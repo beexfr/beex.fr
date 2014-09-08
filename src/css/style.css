@@ -747,6 +747,9 @@ textarea {
       text-decoration: none;
       line-height: 6rem; }
       /* line 78, ../scss/layout/_header.scss */
+      .l-header nav a:last-child {
+        margin-right: 0; }
+      /* line 82, ../scss/layout/_header.scss */
       .l-header nav a:before {
         left: 0;
         bottom: 0;
@@ -757,10 +760,10 @@ textarea {
         position: absolute;
         transition: width .5s ease;
         -webkit-backface-visibility: hidden; }
-      /* line 91, ../scss/layout/_header.scss */
+      /* line 95, ../scss/layout/_header.scss */
       .l-header nav a:hover:before {
         width: 100%; }
-      /* line 95, ../scss/layout/_header.scss */
+      /* line 99, ../scss/layout/_header.scss */
       .l-header nav a.clicked:before {
         left: 0;
         bottom: 0;
@@ -770,13 +773,13 @@ textarea {
         content: '';
         position: absolute; }
 
-/* line 108, ../scss/layout/_header.scss */
+/* line 112, ../scss/layout/_header.scss */
 .header-small {
   height: 4.61538rem; }
-  /* line 111, ../scss/layout/_header.scss */
+  /* line 115, ../scss/layout/_header.scss */
   .header-small .link-home {
     width: 6em; }
-  /* line 115, ../scss/layout/_header.scss */
+  /* line 119, ../scss/layout/_header.scss */
   .header-small nav a {
     line-height: 4.61538rem; }
 
@@ -911,24 +914,38 @@ textarea {
     text-align: center;
     font-size: 1.3em; }
   /* line 89, ../scss/layout/_contact.scss */
-  .btn-wrapper .btn-mail {
-    -webkit-backface-visibility: hidden; }
-  /* line 93, ../scss/layout/_contact.scss */
   .btn-wrapper .new-btn-wrapper {
     right: 100%;
     top: 0;
     width: 100%;
     position: absolute; }
-  /* line 100, ../scss/layout/_contact.scss */
+  /* line 96, ../scss/layout/_contact.scss */
   .btn-wrapper .btn-clicked {
     width: 40%;
     display: inline-block; }
+  /* line 101, ../scss/layout/_contact.scss */
+  .btn-wrapper .copy {
+    font-family: "Muli", serif;
+    font-size: 2em;
+    font-weight: bold;
+    color: #303030;
+    display: inline-block;
+    position: absolute;
+    height: 3em;
+    top: 0;
+    bottom: 0;
+    padding-top: 1rem; }
+  /* line 116, ../scss/layout/_contact.scss */
+  .btn-wrapper .copied {
+    color: #9fb100;
+    font-size: 1.3em;
+    text-transform: uppercase; }
 
-/* line 106, ../scss/layout/_contact.scss */
+/* line 124, ../scss/layout/_contact.scss */
 .text-wrapper {
   opacity: 0.2; }
 
-/* line 110, ../scss/layout/_contact.scss */
+/* line 128, ../scss/layout/_contact.scss */
 .image-wrapper {
   height: 20em;
   position: relative; }
@@ -967,11 +984,12 @@ textarea {
     -moz-transition: width 0.3s ease;
     -ms-transition: width 0.3s ease;
     -o-transition: width 0.3s ease;
-    transition: width 0.3s ease; }
-  /* line 36, ../scss/modules/_btn.scss */
+    transition: width 0.3s ease;
+    -webkit-backface-visibility: hidden; }
+  /* line 37, ../scss/modules/_btn.scss */
   .btn:hover {
     color: white; }
-    /* line 39, ../scss/modules/_btn.scss */
+    /* line 40, ../scss/modules/_btn.scss */
     .btn:hover:before {
       width: 100%; }
 

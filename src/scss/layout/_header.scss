@@ -74,6 +74,10 @@ $header-height: 6rem;
 		  color: $black;
 		  text-decoration: none;
 		  line-height: $header-height;
+
+		  &:last-child {
+		  	margin-right: 0;  
+		  }
 		  
 		  &:before {
 		    left: 0;
@@ -85,7 +89,7 @@ $header-height: 6rem;
 		    position: absolute;
 		    transition: width .5s ease;
 		    //Prevent to let artifacts after animation
-		    -webkit-backface-visibility: hidden
+		    -webkit-backface-visibility: hidden;
 		  }
 		  
 		  &:hover:before {

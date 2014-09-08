@@ -86,10 +86,6 @@
 		font-size: 1.3em;
 	}
 
-	.btn-mail {
-		-webkit-backface-visibility: hidden;
-	}
-
 	.new-btn-wrapper {
 		right: 100%;
 		top: 0;
@@ -100,6 +96,28 @@
 	.btn-clicked {
 		width: 40%;
 		display: inline-block;
+	}
+
+	.copy {
+		font-family: $font3;
+		font-size: 2em;
+		font-weight: bold;
+		// text-decoration: none;
+		color: $black;
+		// line-height: 3rem;
+		display: inline-block;
+		position: absolute;
+		height: 3em;
+		top: 0;
+		bottom: 0;
+		padding-top: 1rem;
+	}
+
+	.copied {
+		color: $green;
+		font-size: 1.3em;
+		text-transform: uppercase;
+		// display: none;
 	}
 }
 

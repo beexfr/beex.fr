@@ -69,15 +69,14 @@
                     <h3>Rencontrez Nous</h3>
                     <p>Vous avez un projet en tête mais vous ne savez pas comment le réaliser ? C'est avec plaisir que nous vous rencontrerons pour vous aider à mettre en place votre idée.</p>
                     <div class="btn-wrapper">
-                        <a href="#" class="btn" id="btn-mail">contact@beex.fr</a>
-                        <div class="new-btn-wrapper" id="new-btn-wrapper">
+                        <a href="#" class="btn" id="btn-mail-meet">contact@beex.fr</a>
+                        <div class="new-btn-wrapper" id="new-btn-wrapper-meet">
                             <a href="mailto:contact@beex.fr" class="btn btn-clicked">Mail</a>
-                            <p>ou</p>
-                            <a href="mailto:contact@beex.fr" class="btn btn-clicked">Copier</a>
+                            <p>/</p>
+                            <a href="#" class="copy" id="copy-meet">Copier</a>
+                            <p class="copied hidden" id="meet-copied"></p>
                         </div>
                     </div>
-                    
-
                 </div>
                 <div class="image-wrapper half hidden" id="meet_img">
                     <img src="src/img/meet3.svg" alt="Rencontrez Nous">
@@ -86,8 +85,16 @@
             <div class="collaborate odd" id="collaborate">
                 <div class="text-wrapper half" id="collaborate_txt">
                     <h3>Participer à l'aventure</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id temporibus ipsam voluptatum quasi similique, impedit rem illo nulla. Perspiciatis, eligendi, possimus maxime sunt similique culpa aliquid, officiis porro nisi veniam ipsam illo earum nesciunt eum.</p>
-                    <a href="mailto:recrut@beex.fr" class="btn btn-collab">recrut@beex.fr</a>
+                    <p>Vous souhaiteriez participer à l'aventure Beexienne ? Nous serions d'entendre parler de vous. Envoyez nous votre CV et nous vous ferons le plaisir de vous répondre.</p>
+                    <div class="btn-wrapper">
+                        <a href="#" class="btn" id="btn-mail-recrut">recrut@beex.fr</a>
+                        <div class="new-btn-wrapper" id="new-btn-wrapper-recrut">
+                            <a href="mailto:recrut@beex.fr" class="btn btn-clicked">Mail</a>
+                            <p>/</p>
+                            <a href="#" class="copy" id="copy-recrut">Copier</a>
+                            <p class="copied hidden" id="recrut-copied"></p>
+                        </div>
+                    </div>
                 </div>
                 <div class="image-wrapper half hidden" id="collaborate_img">
                     <img src="src/img/collaborate3.svg" alt="Rejoignez Nous">
@@ -98,7 +105,6 @@
         <div class="l-footer">
             <img src="src/img/logo.svg" alt="Logo_Beex">
             <p class="copyrights">Copyright © Beex <span id="year"></span></p>
-            <a href="tel:+15555555555">Call me at +1 (555) 555-5555</a>
         </div>
 
 
@@ -115,6 +121,7 @@
     <script src="src/js/waypoints.min.js"></script>
     <script src="src/js/jquery.blast.min.js"></script>
     <script src="src/js/plugins.js"></script>
+    <script src="src/js/jquery.clipboard.js"></script>
     <!-- LiveReload -->
     <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
     <!--<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCE2s1ZqqVbCa9PrFIPTbLenlBxzJFApYQ&amp;sensor=false&amp;extension=.js'></script>-->
