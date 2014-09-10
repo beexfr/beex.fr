@@ -302,6 +302,7 @@ if( !window.location.hash && window.addEventListener ){
         if($this.closest('#aside-menu').length == 0 && $this[0].id != "toggle"){
             $('#site-wrapper').removeClass('show-menu');
           $('#icon').removeClass('menu-open');
+          $('#filter').removeClass('filter-on');
         }
         // console.log($this.closest('#aside-menu').length);
     });
