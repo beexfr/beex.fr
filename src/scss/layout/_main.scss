@@ -7,15 +7,20 @@
 	width: 100%;
 	height: 50em;
 	padding: 1.5em 0;
-
-	// background: #eee;
-
 	text-align: center;
+	@include respond-to(medium) { height: 35em; }
+	@include respond-to(tiny) { 
+		padding: 3em 0 1.5em 0; 
+		height: 25em; 
+	}
 		
 	div {
 		font-size: 4.5rem;
 		@include vertical-center;
 		overflow: hidden;
+		@include respond-to(medium) { font-size: 3em; };
+		@include respond-to(small) { font-size: 3em; };
+		@include respond-to(tiny) { font-size: 2em; };
 	}
 
 	.blast {

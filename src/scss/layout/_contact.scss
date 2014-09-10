@@ -9,20 +9,19 @@
 }
 
 .find, .meet, .collaborate {
-	width: 94%;
-	padding: 4% 3%;
+	width: 95%;
+	padding: 4% 2.5%;
 	position: relative;
 	background-color: #fff;
 	//To keep floating elements inside their parents we use clearfix mixin
 	@include clearfix;
 
-	.half {
-		width: 50%;
-	}
-
 	h3 {
 		font-size: 2.7em;
 		margin: 0;
+
+		@include respond-to(medium) { font-size: 2.5em; }
+		@include respond-to(tiny) { font-size: 2em; }
 
 		&:after {
 			content: '';
@@ -41,16 +40,23 @@
 	}
 
 	img {
-		margin: auto;
 		position: absolute;
-		display: block;
 		top: 0;
 		bottom: 0;
-		right: 0;
 		left: 0;
-		width: 20em;
+		right: 0;
 		opacity: .8;
+		max-width: 60%;
+		margin: auto;
+		display: block;
+
+		@include respond-to(tiny) { max-width: 40%; }
 	}
+}
+
+.text-wrapper, .image-wrapper { 
+	width: 50%; 
+	@include respond-to(tiny) { width: 100%; }
 }
 
 .even {
@@ -77,6 +83,11 @@
 	width: 100%;
 	overflow: hidden;
 	position: relative;
+
+	@include respond-to(tiny) { 
+		width: 80%; 
+		margin: auto;
+	}
 
 	p {
 		margin: 0;
@@ -128,6 +139,8 @@
 .image-wrapper {
 	height: 20em;
 	position: relative;
+
+	@include respond-to(tiny) { height: 10em; }
 }
 
 

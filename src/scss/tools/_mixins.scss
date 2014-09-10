@@ -316,9 +316,24 @@ $prefix-for-spec:      true !default;
 	@include transform(translateY(-50%));
 }
 
+// ----------------------------------------------------------
+// == MEDIA QUERIES
+// ----------------------------------------------------------
 
-
-
+@mixin respond-to($media) {
+  @if $media == tiny {
+    @media only screen and (max-width: $width-small) { @content; }
+  }
+  @else if $media == small {
+    @media only screen and (min-width: $width-tiny + 1) and (max-width: $width-medium - 1) { @content; }
+  }
+  @else if $media == medium {
+    @media only screen and (min-width: $width-small + 1) and (max-width: $width-large - 1) { @content; }
+  }
+  @else if $media == large {
+    @media only screen and (min-width: $width-large) { @content; }
+  }
+}
 
 
 

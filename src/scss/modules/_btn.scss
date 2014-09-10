@@ -5,8 +5,7 @@
 .btn {
 	z-index: 1;
   position: relative;
-  height: 3em;
-  width: 15em;
+  width: 50%;
   display: block;
   
   border: .3em solid $black;
@@ -20,6 +19,11 @@
 
   font-weight: 700;
   color: $black;
+
+  @include respond-to(tiny) { 
+    width: 80%; 
+    margin: auto;
+  }
   
   &:before {
     z-index: -1;

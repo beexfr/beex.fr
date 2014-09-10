@@ -12,15 +12,79 @@ body {
     background-image: url('../img/bg/bg.png');
 }
 
-.container{
-    width: 80%; 
-    margin: 0 auto;
+.site-wrapper {
+    position: relative;
     overflow: hidden;
-    padding-top: 3em;
+    width: 100%;
 }
 
-canvas {
-    display: block;
+$menu-width: 280;
+
+.show-menu .container {
+    @include transform(translate3d(-(pxtoem($menu-width, 16)), 0, 0));
+}
+
+.container {
+    width: 80%; 
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    padding-top: 3em;
+    /* Pour forcer l'accélération GPU on utilise transform3d */
+    @include transform(translate3d(0));
+    @include transition (all .4s ease-out);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
+    @include respond-to(medium) { width: 90%; }
+    @include respond-to(small) { width: 90%; }
+    @include respond-to(tiny) { 
+        width: 100%; 
+        overflow: visible;
+    }
+
+    .filter {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: $black;
+        opacity: 0;
+        @include transition(opacity .3s ease-out);
+
+        &.filter-on { opacity: .4; }
+    }
+
+    .aside-menu {
+        width: pxtoem($menu-width,16);
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: pxtoem(-($menu-width),16);
+        background-color: tomato;
+
+        .aside-menu__list {
+            margin: 0;
+            padding-left: 1em;
+            height: 100%;
+            width: pxtoem($menu-width,16);
+            list-style: none;
+            background-color: tomato;
+            
+            li a {
+                display: block;
+                color: $black;
+                height: 3em;
+                border-bottom: .3em solid $black;
+                font-family: $font1;
+                font-size: 1.2em;
+                line-height: 4em;
+                font-weight: 700;
+            }
+        }
+    }
 }
 
 a {

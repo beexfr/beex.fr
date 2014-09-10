@@ -63,12 +63,12 @@ if( !window.location.hash && window.addEventListener ){
         init();
 
         //Add Class on Click
-        $('a').mouseenter(function() {
+        contact_link.mouseenter(function() {
           $('nav > a').removeClass('clicked');
         })
 
         //Remove Class on Hover
-        $('a').click(function() {
+        contact_link.click(function() {
           $("nav > a").removeClass('clicked');
           $(this).toggleClass('clicked');
         })
@@ -241,7 +241,7 @@ if( !window.location.hash && window.addEventListener ){
         duration: 1000
       });
       $(this).waypoint('disable');
-    }, { offset: '35%' });
+    }, { offset: '40%' });
 
     //-----------------
     //Copy To Clipboard
@@ -268,6 +268,44 @@ if( !window.location.hash && window.addEventListener ){
             return ($('#btn-mail-recrut').text());
         }
     });
+
+    //----------------------
+    //Menu Toggle
+    //----------------------
+    var toggle = $('#l-header').find('#toggle'),
+        icon = $('#l-header').find('#icon'),
+        whole = toggle || icon;
+
+    whole.click(function(e){
+        icon.toggleClass('menu-open');
+        $('#filter').toggleClass('filter-on');
+        // Calling a function in case you want to expand upon this.
+        togglNav();
+        // console.log(e.target);
+        console.log(whole);
+    });
+
+    function togglNav() {
+        if ($('#site-wrapper').hasClass('show-menu')) {
+            // Do things on Nav Close
+            $('#site-wrapper').removeClass('show-menu');
+        } 
+        else {
+            // Do things on Nav Open
+            $('#site-wrapper').addClass('show-menu');
+        }
+    };
+
+    //Click outside menu to hide it
+    $(document).on('click', function(e){
+        var $this = $(e.target);
+        if($this.closest('#aside-menu').length == 0 && $this[0].id != "toggle"){
+            $('#site-wrapper').removeClass('show-menu');
+          $('#icon').removeClass('menu-open');
+        }
+        // console.log($this.closest('#aside-menu').length);
+    });
+
 
     //----------------------
     //Dynamic Year in Footer

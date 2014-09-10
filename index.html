@@ -37,80 +37,89 @@
     <meta name="msapplication-square310x310logo" content="src/img/favicon/mstile-310x310.png" />
 </head>
 <body>
-    <div class="container" id="container">
-        <header class="l-header" id="l-header">
-            <div class="header-wrapper">
-                <a class="link-home" id="link-home" href="index.html"><img src="src/img/logo.svg" alt="Logo Beex"></a>
-                <nav id="nav">
-                    <a href="#find">Trouvez nous</a>
-                    <a href="#meet">Rencontrez nous</a>
-                    <a href="#collaborate">Participer à l'aventure</a>
-                </nav>
+    <div class="site-wrapper" id="site-wrapper">
+        <div class="container" id="container">
+            <div class="filter" id="filter"></div>
+            <div id="aside-menu" class="aside-menu">
+                <ul class="aside-menu__list">
+                    <li><a href="#find">Trouvez nous</a></li>
+                    <li><a href="#meet">Rencontrez Nous</a></li>
+                    <li><a href="#collaborate">Participez à l'aventure</a></li>
+                </ul>
             </div>
-        </header>
-
-        <div class="l-main" id="l-main">
-            <div id="sentences_wrapper"></div>
-        </div>
-
-        <div class="contact" id="contact">
-            <div class="find odd" id="find">
-                <div class="text-wrapper half" id="find_txt">
-                    <h3>Trouvez Nous</h3>
-                    <p>Situés tout proche du quartier de la Bastille, nos locaux sont accessibles à l'adresse suivante :</br></br>157, rue du Faubourg Saint Antoine</br>75011 Paris</p>
-                    <a href="#" class="btn btn-find">Voir le plan</a>
+            <header class="l-header" id="l-header">
+                <div class="header-wrapper">
+                    <a class="link-home" id="link-home" href="index.html"><img src="src/img/logo.svg" alt="Logo Beex"></a>
+                    <a href="#" class="toggle" id="toggle">
+                        <!-- Menu -->
+                        <div class="icon" id="icon"></div>
+                    </a>
+                    <nav id="nav">
+                        <a href="#find">Trouvez nous</a>
+                        <a href="#meet">Rencontrez nous</a>
+                        <a href="#collaborate">Participer à l'aventure</a>
+                    </nav>
                 </div>
-                <div class="image-wrapper half hidden" id="find_img">
-                    <img src="src/img/find3.svg" alt="Trouvez Nous">
-                </div>
+            </header>
+
+            <div class="l-main" id="l-main">
+                <div id="sentences_wrapper"></div>
             </div>
-            <div class="meet even" id="meet">
-                <div class="text-wrapper half" id="meet_txt">
-                    <h3>Rencontrez Nous</h3>
-                    <p>Vous avez un projet en tête mais vous ne savez pas comment le réaliser ? C'est avec plaisir que nous vous rencontrerons pour vous aider à mettre en place votre idée.</p>
-                    <div class="btn-wrapper">
-                        <a href="#" class="btn" id="btn-mail-meet">contact@beex.fr</a>
-                        <div class="new-btn-wrapper" id="new-btn-wrapper-meet">
-                            <a href="mailto:contact@beex.fr" class="btn btn-clicked">Mail</a>
-                            <p>/</p>
-                            <a href="#" class="copy" id="copy-meet">Copier</a>
-                            <p class="copied hidden" id="meet-copied"></p>
+
+            <div class="contact" id="contact">
+                <div class="find odd" id="find">
+                    <div class="image-wrapper hidden" id="find_img">
+                        <img src="src/img/find3.svg" alt="Trouvez Nous">
+                    </div>
+                    <div class="text-wrapper" id="find_txt">
+                        <h3>Trouvez Nous</h3>
+                        <p>Situés tout proche du quartier de la Bastille, nos locaux sont accessibles à l'adresse suivante :</br></br>157, rue du Faubourg Saint Antoine</br>75011 Paris</p>
+                        <a href="#" class="btn btn-find">Voir le plan</a>
+                    </div>
+                </div>
+                <div class="meet even" id="meet">
+                    <div class="image-wrapper hidden" id="meet_img">
+                        <img src="src/img/meet3.svg" alt="Rencontrez Nous">
+                    </div>
+                    <div class="text-wrapper" id="meet_txt">
+                        <h3>Rencontrez Nous</h3>
+                        <p>Vous avez un projet en tête mais vous ne savez pas comment le réaliser ? C'est avec plaisir que nous vous rencontrerons pour vous aider à mettre en place votre idée.</p>
+                        <div class="btn-wrapper">
+                            <a href="#" class="btn" id="btn-mail-meet">contact@beex.fr</a>
+                            <div class="new-btn-wrapper" id="new-btn-wrapper-meet">
+                                <a href="mailto:contact@beex.fr" class="btn btn-clicked">Mail</a>
+                                <a href="#" class="copy" id="copy-meet">Copier</a>
+                                <p class="copied hidden" id="meet-copied"></p>
+                            </div>
+                        </div>
+                </div>
+                    </div>
+                <div class="collaborate odd" id="collaborate">
+                    <div class="image-wrapper hidden" id="collaborate_img">
+                        <img src="src/img/collaborate3.svg" alt="Rejoignez Nous">
+                    </div>
+                    <div class="text-wrapper" id="collaborate_txt">
+                        <h3>Participer à l'aventure</h3>
+                        <p>Vous souhaiteriez participer à l'aventure Beexienne ? Nous serions d'entendre parler de vous. Envoyez nous votre CV et nous vous ferons le plaisir de vous répondre.</p>
+                        <div class="btn-wrapper">
+                            <a href="#" class="btn" id="btn-mail-recrut">recrut@beex.fr</a>
+                            <div class="new-btn-wrapper" id="new-btn-wrapper-recrut">
+                                <a href="mailto:recrut@beex.fr" class="btn btn-clicked">Mail</a>
+                                <a href="#" class="copy" id="copy-recrut">Copier</a>
+                                <p class="copied hidden" id="recrut-copied"></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="image-wrapper half hidden" id="meet_img">
-                    <img src="src/img/meet3.svg" alt="Rencontrez Nous">
-                </div>
             </div>
-            <div class="collaborate odd" id="collaborate">
-                <div class="text-wrapper half" id="collaborate_txt">
-                    <h3>Participer à l'aventure</h3>
-                    <p>Vous souhaiteriez participer à l'aventure Beexienne ? Nous serions d'entendre parler de vous. Envoyez nous votre CV et nous vous ferons le plaisir de vous répondre.</p>
-                    <div class="btn-wrapper">
-                        <a href="#" class="btn" id="btn-mail-recrut">recrut@beex.fr</a>
-                        <div class="new-btn-wrapper" id="new-btn-wrapper-recrut">
-                            <a href="mailto:recrut@beex.fr" class="btn btn-clicked">Mail</a>
-                            <p>/</p>
-                            <a href="#" class="copy" id="copy-recrut">Copier</a>
-                            <p class="copied hidden" id="recrut-copied"></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="image-wrapper half hidden" id="collaborate_img">
-                    <img src="src/img/collaborate3.svg" alt="Rejoignez Nous">
-                </div>
+
+            <div class="l-footer">
+                <img src="src/img/logo.svg" alt="Logo_Beex">
+                <p class="copyrights">Copyright © Beex <span id="year"></span></p>
             </div>
         </div>
-
-        <div class="l-footer">
-            <img src="src/img/logo.svg" alt="Logo_Beex">
-            <p class="copyrights">Copyright © Beex <span id="year"></span></p>
-        </div>
-
-
-
     </div>
-    
+                
     
     <script src="src/js/vendor/modernizr-2.7.2.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
