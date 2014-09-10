@@ -9,6 +9,7 @@
 	padding: 1.5em 0;
 	text-align: center;
 	@include respond-to(medium) { height: 35em; }
+	@include respond-to(small) { height: 35em; }
 	@include respond-to(tiny) { 
 		padding: 3em 0 1.5em 0; 
 		height: 25em; 
@@ -19,7 +20,11 @@
 		@include vertical-center;
 		overflow: hidden;
 		@include respond-to(medium) { font-size: 3em; };
-		@include respond-to(small) { font-size: 3em; };
+		@include respond-to(small) { 
+			font-size: 3em; 
+			width: 90%;
+			margin: auto;
+		};
 		@include respond-to(tiny) { font-size: 2em; };
 	}
 

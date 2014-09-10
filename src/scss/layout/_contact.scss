@@ -20,7 +20,7 @@
 		font-size: 2.7em;
 		margin: 0;
 
-		@include respond-to(medium) { font-size: 2.5em; }
+		@include respond-to(small) { font-size: 2em; }
 		@include respond-to(tiny) { font-size: 2em; }
 
 		&:after {
@@ -50,12 +50,14 @@
 		margin: auto;
 		display: block;
 
-		@include respond-to(tiny) { max-width: 40%; }
+		@include respond-to(small) { max-width: 80%; }
+		@include respond-to(tiny) { max-height: 100%; }
 	}
 }
 
 .text-wrapper, .image-wrapper { 
 	width: 50%; 
+	@include respond-to(small) { width: 50%; }
 	@include respond-to(tiny) { width: 100%; }
 }
 
@@ -84,6 +86,8 @@
 	overflow: hidden;
 	position: relative;
 
+	@include respond-to(small) { width: 100%; }
+
 	@include respond-to(tiny) { 
 		width: 80%; 
 		margin: auto;
@@ -102,6 +106,8 @@
 		top: 0;
 		width: 100%;
 		position: absolute;
+
+		.wrapper-inside { margin: auto }
 	}
 
 	.btn-clicked {
@@ -118,7 +124,7 @@
 		// line-height: 3rem;
 		display: inline-block;
 		position: absolute;
-		height: 3em;
+		// height: 3em;
 		top: 0;
 		bottom: 0;
 		padding-top: 1rem;
@@ -134,13 +140,24 @@
 
 .text-wrapper {
 	opacity: 0.2;
+
+	.separator { font-size: 2em; }
+	@include respond-to(medium) { width: 60%; }
 }
 
 .image-wrapper {
 	height: 20em;
+	margin: 1em 0;
 	position: relative;
 
-	@include respond-to(tiny) { height: 10em; }
+	@include respond-to(medium) { 
+		height: 10em; 
+		width: 40%;
+	}
+
+	@include respond-to(small) { height: 20em; }
+
+	@include respond-to(tiny) { height: 6em; }
 }
 
 

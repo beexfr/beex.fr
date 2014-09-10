@@ -36,8 +36,14 @@ $menu-width: 280;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     
-    @include respond-to(medium) { width: 90%; }
-    @include respond-to(small) { width: 90%; }
+    @include respond-to(medium) { 
+        width: 100%; 
+        overflow: visible;
+    }
+    @include respond-to(small) { 
+        width: 100%;
+        overflow: visible;
+    }
     @include respond-to(tiny) { 
         width: 100%; 
         overflow: visible;
@@ -58,12 +64,17 @@ $menu-width: 280;
     }
 
     .aside-menu {
+        z-index: 3;
         width: pxtoem($menu-width,16);
         height: 100%;
         position: absolute;
         top: 0;
         right: pxtoem(-($menu-width),16);
-        background-color: tomato;
+        background-color: white;
+        -webkit-box-shadow: inset 4px 0px 5px -4px $black;
+             -o-box-shadow: inset 4px 0px 5px -4px $black;
+                box-shadow: inset 4px 0px 5px -4px $black;
+        filter:progid:DXImageTransform.Microsoft.Shadow(color=$black, Direction=90, Strength=5);
 
         .aside-menu__list {
             margin: 0;
@@ -71,13 +82,13 @@ $menu-width: 280;
             height: 100%;
             width: pxtoem($menu-width,16);
             list-style: none;
-            background-color: tomato;
+            background-color: white;
             
             li a {
                 display: block;
                 color: $black;
                 height: 3em;
-                border-bottom: .3em solid $black;
+                border-bottom: .3em solid $green;
                 font-family: $font1;
                 font-size: 1.2em;
                 line-height: 4em;

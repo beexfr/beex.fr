@@ -12,7 +12,7 @@ $toggle-border: .3rem;
 	width: 100%;
 	height: $header-height;
 	position: fixed;
-	z-index: 10;
+	z-index: 2;
 	overflow: hidden;
 
 	background-color: white;
@@ -25,11 +25,12 @@ $toggle-border: .3rem;
 		height: 100%;
 		margin: 0 auto;
 		position: relative;
-		@include respond-to(medium) { width: 90%; }
+		@include respond-to(large) { width: 90%; background-color: royalblue;}
+		@include respond-to(medium) { width: 95%; background-color: green;}
+		@include respond-to(small) { width: 95%; background-color: red;}
+		@include respond-to(tiny) { width: 95%; background-color: pink; }
 
 		.toggle {
-			@include respond-to(tiny) { display: block; }
-			@include respond-to(small) { display: block; }
 		  width: $toggle-height; //pxtoem(60, 16)
 		  height: $toggle-height;
 		  border: $toggle-border solid $black;
@@ -41,6 +42,10 @@ $toggle-border: .3rem;
 		  // font-weight: bold;
 		  // text-transform: uppercase;
 		  // text-align: right;
+
+		  @include respond-to(medium) { display: block; }
+			@include respond-to(small) { display: block; }
+			@include respond-to(tiny) { display: block; }
 		}
 
 		.icon {

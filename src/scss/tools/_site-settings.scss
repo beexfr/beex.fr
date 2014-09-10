@@ -57,7 +57,6 @@ $prefix-for-spec:      true !default; // required for keyframe mixin
 // = Responsive
 // -----------------------------
 
-$width-large: pxtoem(1200, 16); // 1200/16
-$width-medium: pxtoem(992, 16); // 992/16
-$width-small: pxtoem(840, 16); // 768/16
-$width-tiny: pxtoem(840, 16); // 768/16
+$width-large: 850px; 
+$width-small: 750px; 
+$width-tiny: 550px; 

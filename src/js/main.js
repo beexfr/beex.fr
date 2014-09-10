@@ -276,16 +276,14 @@ if( !window.location.hash && window.addEventListener ){
         icon = $('#l-header').find('#icon'),
         whole = toggle || icon;
 
-    whole.click(function(e){
+    toggle.click(function(e){
         icon.toggleClass('menu-open');
         $('#filter').toggleClass('filter-on');
         // Calling a function in case you want to expand upon this.
-        togglNav();
-        // console.log(e.target);
-        console.log(whole);
+        toggleNav();
     });
 
-    function togglNav() {
+    function toggleNav() {
         if ($('#site-wrapper').hasClass('show-menu')) {
             // Do things on Nav Close
             $('#site-wrapper').removeClass('show-menu');
@@ -293,8 +291,20 @@ if( !window.location.hash && window.addEventListener ){
         else {
             // Do things on Nav Open
             $('#site-wrapper').addClass('show-menu');
+            $('#aside-menu__list').find('li').hide().velocity('transition.slideRightBigIn', {
+                duration: 400,
+                stagger: 200
+            })
         }
     };
+
+    $('#aside-menu__list').find('a').click(function(e){
+        e.preventDefault();
+        // e.stopPropagation();
+        $('#filter').removeClass('filter-on');
+        $('#site-wrapper').removeClass('show-menu');
+        console.log(e.target);
+    });
 
     //Click outside menu to hide it
     $(document).on('click', function(e){

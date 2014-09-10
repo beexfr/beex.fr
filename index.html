@@ -39,9 +39,9 @@
 <body>
     <div class="site-wrapper" id="site-wrapper">
         <div class="container" id="container">
-            <div class="filter" id="filter"></div>
+            <!-- <div class="filter" id="filter"></div> -->
             <div id="aside-menu" class="aside-menu">
-                <ul class="aside-menu__list">
+                <ul class="aside-menu__list" id="aside-menu__list">
                     <li><a href="#find">Trouvez nous</a></li>
                     <li><a href="#meet">Rencontrez Nous</a></li>
                     <li><a href="#collaborate">Participez à l'aventure</a></li>
@@ -57,7 +57,7 @@
                     <nav id="nav">
                         <a href="#find">Trouvez nous</a>
                         <a href="#meet">Rencontrez nous</a>
-                        <a href="#collaborate">Participer à l'aventure</a>
+                        <a href="#collaborate">Participez à l'aventure</a>
                     </nav>
                 </div>
             </header>
@@ -74,7 +74,8 @@
                     <div class="text-wrapper" id="find_txt">
                         <h3>Trouvez Nous</h3>
                         <p>Situés tout proche du quartier de la Bastille, nos locaux sont accessibles à l'adresse suivante :</br></br>157, rue du Faubourg Saint Antoine</br>75011 Paris</p>
-                        <a href="#" class="btn btn-find">Voir le plan</a>
+                        <a href="https://www.google.fr/maps/place/157+Rue+du+Faubourg+Saint-Antoine,+75011+Paris/@48.8513653,2.3790499,17z/data=!4m2!3m1!1s0x47e67208cb997375:0x4f334f35d400f311
+                        " class="btn btn-find">Voir le plan</a>
                     </div>
                 </div>
                 <div class="meet even" id="meet">
@@ -88,6 +89,7 @@
                             <a href="#" class="btn" id="btn-mail-meet">contact@beex.fr</a>
                             <div class="new-btn-wrapper" id="new-btn-wrapper-meet">
                                 <a href="mailto:contact@beex.fr" class="btn btn-clicked">Mail</a>
+                                <p class="separator">/</p>
                                 <a href="#" class="copy" id="copy-meet">Copier</a>
                                 <p class="copied hidden" id="meet-copied"></p>
                             </div>
@@ -100,11 +102,12 @@
                     </div>
                     <div class="text-wrapper" id="collaborate_txt">
                         <h3>Participer à l'aventure</h3>
-                        <p>Vous souhaiteriez participer à l'aventure Beexienne ? Nous serions d'entendre parler de vous. Envoyez nous votre CV et nous vous ferons le plaisir de vous répondre.</p>
+                        <p>Vous souhaiteriez participer à l'aventure Beexienne ? Nous serions ravis d'entendre parler de vous. Envoyez nous votre CV et nous vous ferons le plaisir de vous répondre.</p>
                         <div class="btn-wrapper">
                             <a href="#" class="btn" id="btn-mail-recrut">recrut@beex.fr</a>
                             <div class="new-btn-wrapper" id="new-btn-wrapper-recrut">
                                 <a href="mailto:recrut@beex.fr" class="btn btn-clicked">Mail</a>
+                                <p class="separator">/</p>
                                 <a href="#" class="copy" id="copy-recrut">Copier</a>
                                 <p class="copied hidden" id="recrut-copied"></p>
                             </div>
