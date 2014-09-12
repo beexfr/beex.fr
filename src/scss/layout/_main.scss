@@ -19,9 +19,9 @@
 		font-size: 4.5rem;
 		@include vertical-center;
 		overflow: hidden;
-		@include respond-to(medium) { font-size: 3em; };
+		@include respond-to(medium) { font-size: 3.5em; };
 		@include respond-to(small) { 
-			font-size: 3em; 
+			font-size: 2.5em; 
 			width: 90%;
 			margin: auto;
 		};

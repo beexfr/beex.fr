@@ -15,6 +15,7 @@
 	background-color: #fff;
 	//To keep floating elements inside their parents we use clearfix mixin
 	@include clearfix;
+	@include respond-to(small) { padding-top: 6%; }
 
 	h3 {
 		font-size: 2.7em;
@@ -50,14 +51,15 @@
 		margin: auto;
 		display: block;
 
-		@include respond-to(small) { max-width: 80%; }
+		@include respond-to(medium) { max-width: 70%; }
+		@include respond-to(small) { max-height: 100%; }
 		@include respond-to(tiny) { max-height: 100%; }
 	}
 }
 
 .text-wrapper, .image-wrapper { 
 	width: 50%; 
-	@include respond-to(small) { width: 50%; }
+	@include respond-to(small) { width: 100%; }
 	@include respond-to(tiny) { width: 100%; }
 }
 
@@ -155,9 +157,10 @@
 		width: 40%;
 	}
 
-	@include respond-to(small) { height: 20em; }
-
 	@include respond-to(tiny) { height: 6em; }
+	@include respond-to(small) { height: 10em; }
+	@include respond-to(medium) { height: 20em; }
+
 }
 
 

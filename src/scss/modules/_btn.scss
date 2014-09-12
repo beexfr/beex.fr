@@ -19,8 +19,9 @@
 
   font-weight: 700;
   color: $black;
-
-  @include respond-to(small) { width: 70%; }
+  
+  @include respond-to(medium) { width: 70%; }
+  @include respond-to(small) { margin: auto; }
 
   @include respond-to(tiny) { 
     width: 80%; 

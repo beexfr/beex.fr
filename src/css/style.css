@@ -584,7 +584,7 @@ body {
 
 /* line 27, ../scss/base/_base.scss */
 .container {
-  width: 80%;
+  width: 65%;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
@@ -602,7 +602,20 @@ body {
   transition: all 0.4s ease-out;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
-  @media only screen and (min-width: 551px) and (max-width: 849px) {
+  @media only screen and (min-width: 1251px) and (max-width: 1450px) {
+    /* line 27, ../scss/base/_base.scss */
+    .container {
+      width: 80%; } }
+  @media only screen and (min-width: 1051px) and (max-width: 1250px) {
+    /* line 27, ../scss/base/_base.scss */
+    .container {
+      width: 95%; } }
+  @media only screen and (min-width: 851px) and (max-width: 1050px) {
+    /* line 27, ../scss/base/_base.scss */
+    .container {
+      width: 100%;
+      overflow: visible; } }
+  @media only screen and (min-width: 551px) and (max-width: 850px) {
     /* line 27, ../scss/base/_base.scss */
     .container {
       width: 100%;
@@ -612,7 +625,7 @@ body {
     .container {
       width: 100%;
       overflow: visible; } }
-  /* line 52, ../scss/base/_base.scss */
+  /* line 54, ../scss/base/_base.scss */
   .container .filter {
     z-index: 1;
     position: absolute;
@@ -627,10 +640,10 @@ body {
     -ms-transition: opacity 0.3s ease-out;
     -o-transition: opacity 0.3s ease-out;
     transition: opacity 0.3s ease-out; }
-    /* line 63, ../scss/base/_base.scss */
+    /* line 65, ../scss/base/_base.scss */
     .container .filter.filter-on {
       opacity: .4; }
-  /* line 66, ../scss/base/_base.scss */
+  /* line 68, ../scss/base/_base.scss */
   .container .aside-menu {
     z-index: 3;
     width: 17.5em;
@@ -643,7 +656,11 @@ body {
     -o-box-shadow: inset 4px 0px 5px -4px #303030;
     box-shadow: inset 4px 0px 5px -4px #303030;
     filter: progid:DXImageTransform.Microsoft.Shadow(color=$black, Direction=90, Strength=5); }
-    /* line 79, ../scss/base/_base.scss */
+    @media only screen and (min-width: 1051px) and (max-width: 1250px) {
+      /* line 68, ../scss/base/_base.scss */
+      .container .aside-menu {
+        display: none; } }
+    /* line 83, ../scss/base/_base.scss */
     .container .aside-menu .aside-menu__list {
       margin: 0;
       padding-left: 1em;
@@ -651,7 +668,7 @@ body {
       width: 17.5em;
       list-style: none;
       background-color: white; }
-      /* line 87, ../scss/base/_base.scss */
+      /* line 91, ../scss/base/_base.scss */
       .container .aside-menu .aside-menu__list li a {
         display: block;
         color: #303030;
@@ -662,7 +679,7 @@ body {
         line-height: 4em;
         font-weight: 700; }
 
-/* line 101, ../scss/base/_base.scss */
+/* line 105, ../scss/base/_base.scss */
 a {
   color: #303030;
   text-decoration: none;
@@ -671,32 +688,32 @@ a {
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
-  /* line 106, ../scss/base/_base.scss */
+  /* line 110, ../scss/base/_base.scss */
   a:hover {
     color: #171717; }
 
-/* line 111, ../scss/base/_base.scss */
+/* line 115, ../scss/base/_base.scss */
 p {
   font-family: "Open Sans", sans-serif;
   margin: 0; }
 
-/* line 116, ../scss/base/_base.scss */
+/* line 120, ../scss/base/_base.scss */
 h1, h2, h3, h4, h5, h6 {
   margin: 0; }
 
-/* line 118, ../scss/base/_base.scss */
+/* line 122, ../scss/base/_base.scss */
 ::-moz-selection {
   background: #303030;
   color: #fff;
   text-shadow: none; }
 
-/* line 123, ../scss/base/_base.scss */
+/* line 127, ../scss/base/_base.scss */
 ::selection {
   background: #303030;
   color: #fff;
   text-shadow: none; }
 
-/* line 129, ../scss/base/_base.scss */
+/* line 133, ../scss/base/_base.scss */
 hr {
   display: block;
   height: 1px;
@@ -796,12 +813,12 @@ textarea {
     height: 100%;
     margin: 0 auto;
     position: relative; }
-    @media only screen and (min-width: 850px) {
+    @media only screen and (min-width: 851px) and (max-width: 1050px) {
       /* line 23, ../scss/layout/_header.scss */
       .l-header .header-wrapper {
-        width: 90%;
+        width: 95%;
         background-color: royalblue; } }
-    @media only screen and (min-width: 551px) and (max-width: 849px) {
+    @media only screen and (min-width: 551px) and (max-width: 850px) {
       /* line 23, ../scss/layout/_header.scss */
       .l-header .header-wrapper {
         width: 95%;
@@ -811,7 +828,17 @@ textarea {
       .l-header .header-wrapper {
         width: 95%;
         background-color: pink; } }
-    /* line 33, ../scss/layout/_header.scss */
+    @media only screen and (min-width: 1051px) and (max-width: 1250px) {
+      /* line 23, ../scss/layout/_header.scss */
+      .l-header .header-wrapper {
+        width: 95%;
+        background-color: green; } }
+    @media only screen and (min-width: 1251px) and (max-width: 1450px) {
+      /* line 23, ../scss/layout/_header.scss */
+      .l-header .header-wrapper {
+        width: 95%;
+        background-color: gold; } }
+    /* line 34, ../scss/layout/_header.scss */
     .l-header .header-wrapper .toggle {
       width: 3rem;
       height: 3rem;
@@ -820,15 +847,19 @@ textarea {
       position: relative;
       display: none;
       float: right; }
-      @media only screen and (min-width: 551px) and (max-width: 849px) {
-        /* line 33, ../scss/layout/_header.scss */
+      @media only screen and (min-width: 851px) and (max-width: 1050px) {
+        /* line 34, ../scss/layout/_header.scss */
+        .l-header .header-wrapper .toggle {
+          display: block; } }
+      @media only screen and (min-width: 551px) and (max-width: 850px) {
+        /* line 34, ../scss/layout/_header.scss */
         .l-header .header-wrapper .toggle {
           display: block; } }
       @media only screen and (max-width: 550px) {
-        /* line 33, ../scss/layout/_header.scss */
+        /* line 34, ../scss/layout/_header.scss */
         .l-header .header-wrapper .toggle {
           display: block; } }
-    /* line 51, ../scss/layout/_header.scss */
+    /* line 52, ../scss/layout/_header.scss */
     .l-header .header-wrapper .icon {
       z-index: 1;
       width: 1.5em;
@@ -845,7 +876,7 @@ textarea {
       -ms-transition: all 0.3s ease-out;
       -o-transition: all 0.3s ease-out;
       transition: all 0.3s ease-out; }
-      /* line 64, ../scss/layout/_header.scss */
+      /* line 65, ../scss/layout/_header.scss */
       .l-header .header-wrapper .icon:before, .l-header .header-wrapper .icon:after {
         width: 100%;
         height: .25em;
@@ -858,16 +889,16 @@ textarea {
         -ms-transition: all 0.3s ease-out;
         -o-transition: all 0.3s ease-out;
         transition: all 0.3s ease-out; }
-      /* line 74, ../scss/layout/_header.scss */
+      /* line 75, ../scss/layout/_header.scss */
       .l-header .header-wrapper .icon:before {
         top: -0.5em; }
-      /* line 78, ../scss/layout/_header.scss */
+      /* line 79, ../scss/layout/_header.scss */
       .l-header .header-wrapper .icon:after {
         top: .5em; }
-    /* line 83, ../scss/layout/_header.scss */
+    /* line 84, ../scss/layout/_header.scss */
     .l-header .header-wrapper .menu-open {
       background: none; }
-    /* line 87, ../scss/layout/_header.scss */
+    /* line 88, ../scss/layout/_header.scss */
     .l-header .header-wrapper .menu-open:before {
       top: 0;
       -webkit-transform: rotate(45deg);
@@ -875,7 +906,7 @@ textarea {
       -ms-transform: rotate(45deg);
       -o-transform: rotate(45deg);
       transform: rotate(45deg); }
-    /* line 92, ../scss/layout/_header.scss */
+    /* line 93, ../scss/layout/_header.scss */
     .l-header .header-wrapper .menu-open:after {
       top: 0;
       -webkit-transform: rotate(-45deg);
@@ -883,7 +914,7 @@ textarea {
       -ms-transform: rotate(-45deg);
       -o-transform: rotate(-45deg);
       transform: rotate(-45deg); }
-  /* line 98, ../scss/layout/_header.scss */
+  /* line 99, ../scss/layout/_header.scss */
   .l-header .link-home, .l-header nav {
     top: 50%;
     position: relative;
@@ -892,37 +923,45 @@ textarea {
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     transform: translateY(-50%); }
-  /* line 102, ../scss/layout/_header.scss */
+  /* line 103, ../scss/layout/_header.scss */
   .l-header .link-home {
     width: 9em;
     float: left;
     position: absolute; }
-    @media only screen and (min-width: 551px) and (max-width: 849px) {
-      /* line 102, ../scss/layout/_header.scss */
+    @media only screen and (min-width: 851px) and (max-width: 1050px) {
+      /* line 103, ../scss/layout/_header.scss */
+      .l-header .link-home {
+        width: 6em; } }
+    @media only screen and (min-width: 551px) and (max-width: 850px) {
+      /* line 103, ../scss/layout/_header.scss */
       .l-header .link-home {
         width: 6em; } }
     @media only screen and (max-width: 550px) {
-      /* line 102, ../scss/layout/_header.scss */
+      /* line 103, ../scss/layout/_header.scss */
       .l-header .link-home {
         width: 6em; } }
-    /* line 110, ../scss/layout/_header.scss */
+    /* line 111, ../scss/layout/_header.scss */
     .l-header .link-home img {
       max-width: 100%;
       width: 100%;
       height: auto; }
-  /* line 117, ../scss/layout/_header.scss */
+  /* line 118, ../scss/layout/_header.scss */
   .l-header nav {
     float: right;
     height: 100%; }
     @media only screen and (max-width: 550px) {
-      /* line 117, ../scss/layout/_header.scss */
+      /* line 118, ../scss/layout/_header.scss */
       .l-header nav {
         display: none; } }
-    @media only screen and (min-width: 551px) and (max-width: 849px) {
-      /* line 117, ../scss/layout/_header.scss */
+    @media only screen and (min-width: 551px) and (max-width: 850px) {
+      /* line 118, ../scss/layout/_header.scss */
       .l-header nav {
         display: none; } }
-    /* line 124, ../scss/layout/_header.scss */
+    @media only screen and (min-width: 851px) and (max-width: 1050px) {
+      /* line 118, ../scss/layout/_header.scss */
+      .l-header nav {
+        display: none; } }
+    /* line 126, ../scss/layout/_header.scss */
     .l-header nav a {
       display: inline-block;
       font-family: "Open Sans", sans-serif;
@@ -933,10 +972,10 @@ textarea {
       color: #303030;
       text-decoration: none;
       line-height: 6rem; }
-      /* line 135, ../scss/layout/_header.scss */
+      /* line 137, ../scss/layout/_header.scss */
       .l-header nav a:last-child {
         margin-right: 0; }
-      /* line 139, ../scss/layout/_header.scss */
+      /* line 141, ../scss/layout/_header.scss */
       .l-header nav a:before {
         left: 0;
         bottom: 0;
@@ -947,10 +986,10 @@ textarea {
         position: absolute;
         transition: width .5s ease;
         -webkit-backface-visibility: hidden; }
-      /* line 152, ../scss/layout/_header.scss */
+      /* line 154, ../scss/layout/_header.scss */
       .l-header nav a:hover:before {
         width: 100%; }
-      /* line 156, ../scss/layout/_header.scss */
+      /* line 158, ../scss/layout/_header.scss */
       .l-header nav a.clicked:before {
         left: 0;
         bottom: 0;
@@ -959,13 +998,13 @@ textarea {
         background: #9fb100;
         content: '';
         position: absolute; }
-    /* line 167, ../scss/layout/_header.scss */
+    /* line 169, ../scss/layout/_header.scss */
     .l-header nav .header-small {
       height: 4.61538rem; }
-      /* line 170, ../scss/layout/_header.scss */
+      /* line 172, ../scss/layout/_header.scss */
       .l-header nav .header-small .link-home {
         width: 6em; }
-      /* line 174, ../scss/layout/_header.scss */
+      /* line 176, ../scss/layout/_header.scss */
       .l-header nav .header-small nav a {
         line-height: 4.61538rem; }
 
@@ -997,7 +1036,11 @@ textarea {
   height: 50em;
   padding: 1.5em 0;
   text-align: center; }
-  @media only screen and (min-width: 551px) and (max-width: 849px) {
+  @media only screen and (min-width: 851px) and (max-width: 1050px) {
+    /* line 5, ../scss/layout/_main.scss */
+    .l-main {
+      height: 35em; } }
+  @media only screen and (min-width: 551px) and (max-width: 850px) {
     /* line 5, ../scss/layout/_main.scss */
     .l-main {
       height: 35em; } }
@@ -1017,10 +1060,14 @@ textarea {
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
     overflow: hidden; }
-    @media only screen and (min-width: 551px) and (max-width: 849px) {
+    @media only screen and (min-width: 851px) and (max-width: 1050px) {
       /* line 18, ../scss/layout/_main.scss */
       .l-main div {
-        font-size: 3em;
+        font-size: 3.5em; } }
+    @media only screen and (min-width: 551px) and (max-width: 850px) {
+      /* line 18, ../scss/layout/_main.scss */
+      .l-main div {
+        font-size: 2.5em;
         width: 90%;
         margin: auto; } }
     @media only screen and (max-width: 550px) {
@@ -1060,19 +1107,23 @@ textarea {
   /* line 36, ../scss/tools/_mixins.scss */
   .find:after, .meet:after, .collaborate:after {
     clear: both; }
-  /* line 19, ../scss/layout/_contact.scss */
+  @media only screen and (min-width: 551px) and (max-width: 850px) {
+    /* line 11, ../scss/layout/_contact.scss */
+    .find, .meet, .collaborate {
+      padding-top: 6%; } }
+  /* line 20, ../scss/layout/_contact.scss */
   .find h3, .meet h3, .collaborate h3 {
     font-size: 2.7em;
     margin: 0; }
-    @media only screen and (min-width: 551px) and (max-width: 849px) {
-      /* line 19, ../scss/layout/_contact.scss */
+    @media only screen and (min-width: 551px) and (max-width: 850px) {
+      /* line 20, ../scss/layout/_contact.scss */
       .find h3, .meet h3, .collaborate h3 {
         font-size: 2em; } }
     @media only screen and (max-width: 550px) {
-      /* line 19, ../scss/layout/_contact.scss */
+      /* line 20, ../scss/layout/_contact.scss */
       .find h3, .meet h3, .collaborate h3 {
         font-size: 2em; } }
-    /* line 26, ../scss/layout/_contact.scss */
+    /* line 27, ../scss/layout/_contact.scss */
     .find h3:after, .meet h3:after, .collaborate h3:after {
       content: '';
       display: block;
@@ -1080,12 +1131,12 @@ textarea {
       height: .5rem;
       width: 2rem;
       background-color: #303030; }
-  /* line 36, ../scss/layout/_contact.scss */
+  /* line 37, ../scss/layout/_contact.scss */
   .find p, .meet p, .collaborate p {
     font-size: 1.3em;
     margin-bottom: 1em;
     font-family: "Muli", serif; }
-  /* line 42, ../scss/layout/_contact.scss */
+  /* line 43, ../scss/layout/_contact.scss */
   .find img, .meet img, .collaborate img {
     position: absolute;
     top: 0;
@@ -1096,76 +1147,80 @@ textarea {
     max-width: 60%;
     margin: auto;
     display: block; }
-    @media only screen and (min-width: 551px) and (max-width: 849px) {
-      /* line 42, ../scss/layout/_contact.scss */
+    @media only screen and (min-width: 851px) and (max-width: 1050px) {
+      /* line 43, ../scss/layout/_contact.scss */
       .find img, .meet img, .collaborate img {
-        max-width: 80%; } }
+        max-width: 70%; } }
+    @media only screen and (min-width: 551px) and (max-width: 850px) {
+      /* line 43, ../scss/layout/_contact.scss */
+      .find img, .meet img, .collaborate img {
+        max-height: 100%; } }
     @media only screen and (max-width: 550px) {
-      /* line 42, ../scss/layout/_contact.scss */
+      /* line 43, ../scss/layout/_contact.scss */
       .find img, .meet img, .collaborate img {
         max-height: 100%; } }
 
-/* line 58, ../scss/layout/_contact.scss */
+/* line 60, ../scss/layout/_contact.scss */
 .text-wrapper, .image-wrapper {
   width: 50%; }
-  @media only screen and (min-width: 551px) and (max-width: 849px) {
-    /* line 58, ../scss/layout/_contact.scss */
+  @media only screen and (min-width: 551px) and (max-width: 850px) {
+    /* line 60, ../scss/layout/_contact.scss */
     .text-wrapper, .image-wrapper {
-      width: 50%; } }
+      width: 100%; } }
   @media only screen and (max-width: 550px) {
-    /* line 58, ../scss/layout/_contact.scss */
+    /* line 60, ../scss/layout/_contact.scss */
     .text-wrapper, .image-wrapper {
       width: 100%; } }
 
-/* line 65, ../scss/layout/_contact.scss */
+/* line 67, ../scss/layout/_contact.scss */
 .even .text-wrapper {
   float: right; }
-/* line 69, ../scss/layout/_contact.scss */
+/* line 71, ../scss/layout/_contact.scss */
 .even .image-wrapper {
   float: left; }
 
-/* line 75, ../scss/layout/_contact.scss */
+/* line 77, ../scss/layout/_contact.scss */
 .odd .text-wrapper {
   float: left; }
-/* line 79, ../scss/layout/_contact.scss */
+/* line 81, ../scss/layout/_contact.scss */
 .odd .image-wrapper {
   float: right; }
 
-/* line 84, ../scss/layout/_contact.scss */
+/* line 86, ../scss/layout/_contact.scss */
 .btn-wrapper {
   width: 100%;
   overflow: hidden;
   position: relative; }
-  @media only screen and (min-width: 551px) and (max-width: 849px) {
-    /* line 84, ../scss/layout/_contact.scss */
+  @media only screen and (min-width: 551px) and (max-width: 850px) {
+    /* line 86, ../scss/layout/_contact.scss */
     .btn-wrapper {
       width: 100%; } }
   @media only screen and (max-width: 550px) {
-    /* line 84, ../scss/layout/_contact.scss */
+    /* line 86, ../scss/layout/_contact.scss */
     .btn-wrapper {
       width: 80%;
       margin: auto; } }
-  /* line 96, ../scss/layout/_contact.scss */
+  /* line 98, ../scss/layout/_contact.scss */
   .btn-wrapper p {
     margin: 0;
     display: inline-block;
     width: 10%;
     text-align: center;
     font-size: 1.3em; }
-  /* line 104, ../scss/layout/_contact.scss */
+  /* line 106, ../scss/layout/_contact.scss */
   .btn-wrapper .new-btn-wrapper {
     right: 100%;
     top: 0;
     width: 100%;
     position: absolute; }
-    /* line 110, ../scss/layout/_contact.scss */
+    /* line 112, ../scss/layout/_contact.scss */
     .btn-wrapper .new-btn-wrapper .wrapper-inside {
       margin: auto; }
-  /* line 113, ../scss/layout/_contact.scss */
+  /* line 115, ../scss/layout/_contact.scss */
   .btn-wrapper .btn-clicked {
     width: 40%;
     display: inline-block; }
-  /* line 118, ../scss/layout/_contact.scss */
+  /* line 120, ../scss/layout/_contact.scss */
   .btn-wrapper .copy {
     font-family: "Muli", serif;
     font-size: 2em;
@@ -1176,32 +1231,45 @@ textarea {
     top: 0;
     bottom: 0;
     padding-top: 1rem; }
-  /* line 133, ../scss/layout/_contact.scss */
+  /* line 135, ../scss/layout/_contact.scss */
   .btn-wrapper .copied {
     color: #9fb100;
     font-size: 1.3em;
     text-transform: uppercase; }
 
-/* line 141, ../scss/layout/_contact.scss */
+/* line 143, ../scss/layout/_contact.scss */
 .text-wrapper {
   opacity: 0.2; }
-  /* line 144, ../scss/layout/_contact.scss */
+  /* line 146, ../scss/layout/_contact.scss */
   .text-wrapper .separator {
     font-size: 2em; }
+  @media only screen and (min-width: 851px) and (max-width: 1050px) {
+    /* line 143, ../scss/layout/_contact.scss */
+    .text-wrapper {
+      width: 60%; } }
 
-/* line 148, ../scss/layout/_contact.scss */
+/* line 150, ../scss/layout/_contact.scss */
 .image-wrapper {
   height: 20em;
   margin: 1em 0;
   position: relative; }
-  @media only screen and (min-width: 551px) and (max-width: 849px) {
-    /* line 148, ../scss/layout/_contact.scss */
+  @media only screen and (min-width: 851px) and (max-width: 1050px) {
+    /* line 150, ../scss/layout/_contact.scss */
     .image-wrapper {
-      height: 20em; } }
+      height: 10em;
+      width: 40%; } }
   @media only screen and (max-width: 550px) {
-    /* line 148, ../scss/layout/_contact.scss */
+    /* line 150, ../scss/layout/_contact.scss */
     .image-wrapper {
       height: 6em; } }
+  @media only screen and (min-width: 551px) and (max-width: 850px) {
+    /* line 150, ../scss/layout/_contact.scss */
+    .image-wrapper {
+      height: 10em; } }
+  @media only screen and (min-width: 851px) and (max-width: 1050px) {
+    /* line 150, ../scss/layout/_contact.scss */
+    .image-wrapper {
+      height: 20em; } }
 
 /* Modules */
 /* =======================
@@ -1222,16 +1290,20 @@ textarea {
   font-family: "Muli", serif;
   font-weight: 700;
   color: #303030; }
-  @media only screen and (min-width: 551px) and (max-width: 849px) {
+  @media only screen and (min-width: 851px) and (max-width: 1050px) {
     /* line 5, ../scss/modules/_btn.scss */
     .btn {
       width: 70%; } }
+  @media only screen and (min-width: 551px) and (max-width: 850px) {
+    /* line 5, ../scss/modules/_btn.scss */
+    .btn {
+      margin: auto; } }
   @media only screen and (max-width: 550px) {
     /* line 5, ../scss/modules/_btn.scss */
     .btn {
       width: 80%;
       margin: auto; } }
-  /* line 30, ../scss/modules/_btn.scss */
+  /* line 31, ../scss/modules/_btn.scss */
   .btn:before {
     z-index: -1;
     content: '';
@@ -1247,10 +1319,10 @@ textarea {
     -o-transition: width 0.3s ease;
     transition: width 0.3s ease;
     -webkit-backface-visibility: hidden; }
-  /* line 43, ../scss/modules/_btn.scss */
+  /* line 44, ../scss/modules/_btn.scss */
   .btn:hover {
     color: white; }
-    /* line 46, ../scss/modules/_btn.scss */
+    /* line 47, ../scss/modules/_btn.scss */
     .btn:hover:before {
       width: 100%; }
 

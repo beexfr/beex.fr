@@ -57,6 +57,8 @@ $prefix-for-spec:      true !default; // required for keyframe mixin
 // = Responsive
 // -----------------------------
 
-$width-large: 850px; 
-$width-small: 750px; 
+$width-xlarge: 1450px;
+$width-large: 1250px;
+$width-medium: 1050px; 
+$width-small: 850px; 
 $width-tiny: 550px; 

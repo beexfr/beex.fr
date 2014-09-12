@@ -1,0 +1,3 @@
+Régler le click sur l'icon et le toggle.
+Chaque click génère une anim velocity sur le aside menu
+Les phrases restent si menu activé

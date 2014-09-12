@@ -25,7 +25,7 @@ $menu-width: 280;
 }
 
 .container {
-    width: 80%; 
+    width: 65%; 
     margin: 0 auto;
     position: relative;
     overflow: hidden;
@@ -36,6 +36,8 @@ $menu-width: 280;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     
+    @include respond-to(extra-large) { width: 80%; }
+    @include respond-to(large) { width: 95%; }
     @include respond-to(medium) { 
         width: 100%; 
         overflow: visible;
@@ -75,6 +77,8 @@ $menu-width: 280;
              -o-box-shadow: inset 4px 0px 5px -4px $black;
                 box-shadow: inset 4px 0px 5px -4px $black;
         filter:progid:DXImageTransform.Microsoft.Shadow(color=$black, Direction=90, Strength=5);
+
+        @include respond-to(large) { display: none; }
 
         .aside-menu__list {
             margin: 0;
