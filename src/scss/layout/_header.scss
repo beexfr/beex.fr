@@ -25,11 +25,11 @@ $toggle-border: .3rem;
 		height: 100%;
 		margin: 0 auto;
 		position: relative;
-		@include respond-to(medium) { width: 95%; background-color: royalblue;}
-		@include respond-to(small) { width: 95%; background-color: red;}
-		@include respond-to(tiny) { width: 95%; background-color: pink; }
-		@include respond-to(large) { width: 95%; background-color: green; }
-		@include respond-to(extra-large) { width: 95%; background-color: gold; }
+		// @include respond-to(medium) { width: 95%; background-color: royalblue;}
+		// @include respond-to(small) { width: 95%; background-color: red;}
+		// @include respond-to(tiny) { width: 95%; background-color: pink; }
+		// @include respond-to(large) { width: 95%; background-color: green; }
+		// @include respond-to(extra-large) { width: 95%; background-color: gold; }
 
 		.toggle {
 		  width: $toggle-height; //pxtoem(60, 16)

@@ -18,9 +18,6 @@ if( !window.location.hash && window.addEventListener ){
     });
 }
 
-
-
-
 (function($){
 
     //----------------
@@ -276,12 +273,14 @@ if( !window.location.hash && window.addEventListener ){
         icon = $('#l-header').find('#icon'),
         whole = toggle || icon;
 
-    toggle.click(function(e){
+    $(toggle, icon).click(function(){
         icon.toggleClass('menu-open');
         $('#filter').toggleClass('filter-on');
         // Calling a function in case you want to expand upon this.
         toggleNav();
     });
+
+    console.log($('#toggle'));
 
     function toggleNav() {
         if ($('#site-wrapper').hasClass('show-menu')) {
@@ -302,6 +301,7 @@ if( !window.location.hash && window.addEventListener ){
         e.preventDefault();
         // e.stopPropagation();
         $('#filter').removeClass('filter-on');
+        $('#icon').removeClass('menu-open');
         $('#site-wrapper').removeClass('show-menu');
         console.log(e.target);
     });
@@ -314,14 +314,20 @@ if( !window.location.hash && window.addEventListener ){
           $('#icon').removeClass('menu-open');
           $('#filter').removeClass('filter-on');
         }
-        // console.log($this.closest('#aside-menu').length);
     });
-
 
     //----------------------
     //Dynamic Year in Footer
     //----------------------
     $('#year').text(new Date().getFullYear());
+
+    //----------------------
+    //SVG Fallback
+    //----------------------
+    if (!Modernizr.svg) {
+      $("img[src$='.svg']")
+        .attr("src", fallback);
+    }
       
 })(jQuery);
 

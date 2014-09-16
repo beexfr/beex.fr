@@ -1,3 +1,51 @@
 Régler le click sur l'icon et le toggle.
 Chaque click génère une anim velocity sur le aside menu
 Les phrases restent si menu activé
+
+Iphone 5: Safari/Chrome (tiny)
+2 clicks needed pour les liens
+SVG non compatibles
+new-btn-wrapper trop large.
+
+Need accès Git Beex
+
+- Minify CSS, rename the css file in style.min.css, place it in dist/src/css
+- Merge JS files, minify js, rename js file in script.min.js, place it in dist/src/js
+- Optimize img, place them in dist/src/img
+- copy html file in dist/, replace css/js filepath by new ones
+
+
+
+
+
+Installation Gulp : 
+
+1) Installer sur la machine : sudo npm install -g gulp
+2) Créer un fichier package.json qui va lister les dépendances de notre projet : npm init --> yes to all
+3) Installer Gulp sur notre projet : npm install gulp--save-dev (--save signifie qu'on a besoin de cette dépendance, donc on l'a save), (-dev signifie que l'on aura besoin de Gulp seulement pendant la phase de développement et pas pendant la mise en production). A la suite de ça on devait avoir dans notre fichier package.json ceci :
+
+	"devDependencies": {
+    "gulp": "^3.8.8"
+  }
+
+4)Maintenant que Gulp est correctement installé il nous faut créer un fichier gulpfile.js dans lequel nous allons écrire les différentes fonctions que devra réaliser Gulp.
+
+5) Créer une variable gulp qui va stocker le module Gulp
+ var gulp = require ('gulp');
+
+6) Créer la première tâche : 
+gulp.task('ma_tache', function(){
+		
+});
+
+7) Pour lancer l'éxécution de cette fonction on applique dans le terminal la commande gulp ma_tache. Un simple 'gulp' lance la tache par défaut.
+
+8) Gulp permet l'utilisation de modules que l'on doit installer. 
+sudo npm install mon_module_gulp --save-dev
+
+9) Stocker ce module dans une variable var mon_module = require('mon_module_gulp')
+
+10) Généralement une tâche aura la structure suivante : 
+	- On indique les fichiers à traiter : gulp.src('../js/*.js') --> selectionnera les fichiers js contenus dans mon dossier JS.
+	- On les fait passer dans un tunnel de tâche : gulp.src('../js/*.js').pipe(mon_module_gulp())
+	- On indique le chemin de destination de nos nouveaux fichier : gulp.src('../js/*.js').pipe(mon_module_gulp()).pipe(gulp.dest('js'))
