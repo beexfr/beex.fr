@@ -1208,7 +1208,7 @@ hr {
   @media only screen and (min-width: 851px) and (max-width: 1050px) {
     /* line 5, ../scss/modules/_btn.scss */
     .btn {
-      width: 70%; } }
+      width: 50%; } }
   @media only screen and (min-width: 551px) and (max-width: 850px) {
     /* line 5, ../scss/modules/_btn.scss */
     .btn {
@@ -1219,25 +1219,49 @@ hr {
       width: 80%;
       margin: auto;
       font-size: 1em; } }
-  /* line 33, ../scss/modules/_btn.scss */
-  .btn:before {
-    z-index: -1;
-    content: '';
-    display: block;
-    background-color: #303030;
-    position: absolute;
-    left: 0;
-    width: 0;
-    height: 100%;
-    -webkit-transition: width 0.3s ease;
-    -moz-transition: width 0.3s ease;
-    -ms-transition: width 0.3s ease;
-    -o-transition: width 0.3s ease;
-    transition: width 0.3s ease;
-    -webkit-backface-visibility: hidden; }
-  /* line 46, ../scss/modules/_btn.scss */
-  .btn:hover {
-    color: white; }
-    /* line 49, ../scss/modules/_btn.scss */
-    .btn:hover:before {
-      width: 100%; }
+  @media only screen and (min-width: 1051px) and (max-width: 1250px) {
+    /* line 34, ../scss/modules/_btn.scss */
+    .btn:before {
+      z-index: -1;
+      content: '';
+      display: block;
+      background-color: #303030;
+      position: absolute;
+      left: 0;
+      width: 0;
+      height: 100%;
+      -webkit-transition: width 0.3s ease;
+      -moz-transition: width 0.3s ease;
+      -ms-transition: width 0.3s ease;
+      -o-transition: width 0.3s ease;
+      transition: width 0.3s ease;
+      -webkit-backface-visibility: hidden; }
+    /* line 47, ../scss/modules/_btn.scss */
+    .btn:hover {
+      color: white; }
+      /* line 50, ../scss/modules/_btn.scss */
+      .btn:hover:before {
+        width: 100%; } }
+  @media only screen and (min-width: 1251px) and (max-width: 1450px) {
+    /* line 57, ../scss/modules/_btn.scss */
+    .btn:before {
+      z-index: -1;
+      content: '';
+      display: block;
+      background-color: #303030;
+      position: absolute;
+      left: 0;
+      width: 0;
+      height: 100%;
+      -webkit-transition: width 0.3s ease;
+      -moz-transition: width 0.3s ease;
+      -ms-transition: width 0.3s ease;
+      -o-transition: width 0.3s ease;
+      transition: width 0.3s ease;
+      -webkit-backface-visibility: hidden; }
+    /* line 70, ../scss/modules/_btn.scss */
+    .btn:hover {
+      color: white; }
+      /* line 73, ../scss/modules/_btn.scss */
+      .btn:hover:before {
+        width: 100%; } }

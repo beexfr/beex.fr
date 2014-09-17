@@ -21,7 +21,7 @@
   color: $black;
   cursor: pointer;
   
-  @include respond-to(medium) { width: 70%; }
+  @include respond-to(medium) { width: 50%; }
   @include respond-to(small) { margin: auto; }
 
   @include respond-to(tiny) { 
@@ -30,24 +30,49 @@
     font-size: 1em;
   }
   
-  &:before {
-    z-index: -1;
-    content:'';
-    display: block;
-    background-color: $black;
-    position: absolute;
-    left: 0;
-    width: 0;
-    height: 100%;
-    @include transition(width .3s ease);
-    -webkit-backface-visibility: hidden;
-  }
-  
-  &:hover {
-    color: white;
-    
+  @include respond-to(large) {
     &:before {
-      width: 100%;
+      z-index: -1;
+      content:'';
+      display: block;
+      background-color: $black;
+      position: absolute;
+      left: 0;
+      width: 0;
+      height: 100%;
+      @include transition(width .3s ease);
+      -webkit-backface-visibility: hidden;
+    }
+    
+    &:hover {
+      color: white;
+      
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+
+  @include respond-to(extra-large) {
+    &:before {
+      z-index: -1;
+      content:'';
+      display: block;
+      background-color: $black;
+      position: absolute;
+      left: 0;
+      width: 0;
+      height: 100%;
+      @include transition(width .3s ease);
+      -webkit-backface-visibility: hidden;
+    }
+    
+    &:hover {
+      color: white;
+      
+      &:before {
+        width: 100%;
+      }
     }
   }
 }
