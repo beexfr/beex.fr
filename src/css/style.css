@@ -660,7 +660,11 @@ body {
       /* line 68, ../scss/base/_base.scss */
       .container .aside-menu {
         display: none; } }
-    /* line 83, ../scss/base/_base.scss */
+    @media only screen and (max-width: 550px) {
+      /* line 68, ../scss/base/_base.scss */
+      .container .aside-menu {
+        width: 14.58333em; } }
+    /* line 84, ../scss/base/_base.scss */
     .container .aside-menu .aside-menu__list {
       margin: 0;
       padding-left: 1em;
@@ -668,7 +672,7 @@ body {
       width: 17.5em;
       list-style: none;
       background-color: white; }
-      /* line 91, ../scss/base/_base.scss */
+      /* line 92, ../scss/base/_base.scss */
       .container .aside-menu .aside-menu__list li a {
         display: block;
         color: #303030;
@@ -679,7 +683,7 @@ body {
         line-height: 4em;
         font-weight: 700; }
 
-/* line 105, ../scss/base/_base.scss */
+/* line 106, ../scss/base/_base.scss */
 a {
   color: #303030;
   text-decoration: none;
@@ -688,32 +692,32 @@ a {
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
-  /* line 110, ../scss/base/_base.scss */
+  /* line 111, ../scss/base/_base.scss */
   a:hover {
     color: #171717; }
 
-/* line 115, ../scss/base/_base.scss */
+/* line 116, ../scss/base/_base.scss */
 p {
   font-family: "Open Sans", sans-serif;
   margin: 0; }
 
-/* line 120, ../scss/base/_base.scss */
+/* line 121, ../scss/base/_base.scss */
 h1, h2, h3, h4, h5, h6 {
   margin: 0; }
 
-/* line 122, ../scss/base/_base.scss */
+/* line 123, ../scss/base/_base.scss */
 ::-moz-selection {
   background: #303030;
   color: #fff;
   text-shadow: none; }
 
-/* line 127, ../scss/base/_base.scss */
+/* line 128, ../scss/base/_base.scss */
 ::selection {
   background: #303030;
   color: #fff;
   text-shadow: none; }
 
-/* line 133, ../scss/base/_base.scss */
+/* line 134, ../scss/base/_base.scss */
 hr {
   display: block;
   height: 1px;

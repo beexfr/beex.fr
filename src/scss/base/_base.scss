@@ -79,6 +79,7 @@ $menu-width: 280;
         filter:progid:DXImageTransform.Microsoft.Shadow(color=$black, Direction=90, Strength=5);
 
         @include respond-to(large) { display: none; }
+        @include respond-to(tiny) { width: pxtoem($menu-width/1.2, 16) }
 
         .aside-menu__list {
             margin: 0;
