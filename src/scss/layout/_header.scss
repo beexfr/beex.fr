@@ -79,6 +79,8 @@ $toggle-border: .3rem;
 			&:after {
 			  top: .5em;
 			}
+
+			&, &:before, &:after { pointer-events: none }
 		}
 
 		.menu-open {
@@ -181,5 +183,5 @@ $toggle-border: .3rem;
 }	
 
 
-
+		
 	

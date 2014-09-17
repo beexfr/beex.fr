@@ -1,11 +1,8 @@
-Régler le click sur l'icon et le toggle.
-Chaque click génère une anim velocity sur le aside menu
 Les phrases restent si menu activé
 
 Iphone 5: Safari/Chrome (tiny)
 2 clicks needed pour les liens
 SVG non compatibles
-new-btn-wrapper trop large.
 
 Need accès Git Beex
 
@@ -15,14 +12,11 @@ Need accès Git Beex
 - copy html file in dist/, replace css/js filepath by new ones
 
 
-
-
-
 Installation Gulp : 
 
 1) Installer sur la machine : sudo npm install -g gulp
 2) Créer un fichier package.json qui va lister les dépendances de notre projet : npm init --> yes to all
-3) Installer Gulp sur notre projet : npm install gulp--save-dev (--save signifie qu'on a besoin de cette dépendance, donc on l'a save), (-dev signifie que l'on aura besoin de Gulp seulement pendant la phase de développement et pas pendant la mise en production). A la suite de ça on devait avoir dans notre fichier package.json ceci :
+3) Installer Gulp sur notre projet : npm install gulp--save-dev (--save signifie qu'on a besoin de cette dépendance, donc on la save), (-dev signifie que l'on aura besoin de Gulp seulement pendant la phase de développement et pas pendant la mise en production). A la suite de ça on devait avoir dans notre fichier package.json ceci :
 
 	"devDependencies": {
     "gulp": "^3.8.8"

@@ -273,16 +273,13 @@ if( !window.location.hash && window.addEventListener ){
         icon = $('#l-header').find('#icon'),
         whole = toggle || icon;
 
-    $(toggle, icon).click(function(){
-        icon.toggleClass('menu-open');
-        $('#filter').toggleClass('filter-on');
-        // Calling a function in case you want to expand upon this.
+    $(toggle).click(function(e){
         toggleNav();
     });
 
-    console.log($('#toggle'));
-
     function toggleNav() {
+        $('#icon').toggleClass('menu-open');
+        $('#filter').toggleClass('filter-on');
         if ($('#site-wrapper').hasClass('show-menu')) {
             // Do things on Nav Close
             $('#site-wrapper').removeClass('show-menu');
@@ -299,11 +296,9 @@ if( !window.location.hash && window.addEventListener ){
 
     $('#aside-menu__list').find('a').click(function(e){
         e.preventDefault();
-        // e.stopPropagation();
         $('#filter').removeClass('filter-on');
         $('#icon').removeClass('menu-open');
         $('#site-wrapper').removeClass('show-menu');
-        console.log(e.target);
     });
 
     //Click outside menu to hide it
