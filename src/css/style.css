@@ -660,10 +660,6 @@ body {
       /* line 68, ../scss/base/_base.scss */
       .container .aside-menu {
         display: none; } }
-    @media only screen and (max-width: 550px) {
-      /* line 68, ../scss/base/_base.scss */
-      .container .aside-menu {
-        width: 14.58333em; } }
     /* line 84, ../scss/base/_base.scss */
     .container .aside-menu .aside-menu__list {
       margin: 0;

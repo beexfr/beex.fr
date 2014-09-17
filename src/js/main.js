@@ -311,6 +311,15 @@ if( !window.location.hash && window.addEventListener ){
         }
     });
 
+    //----------------------------
+    //Hover effect fallback on iOs
+    //----------------------------
+    $('a').on('click touchend', function(e) {
+        var el = $(this);
+        var link = el.attr('href');
+        window.location = link;
+    });
+
     //----------------------
     //Dynamic Year in Footer
     //----------------------
