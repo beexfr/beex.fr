@@ -19,7 +19,6 @@
 
   font-weight: 700;
   color: $black;
-  cursor: pointer;
   
   @include respond-to(medium) { width: 50%; }
   @include respond-to(small) { margin: auto; }

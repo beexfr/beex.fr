@@ -165,7 +165,7 @@ if( !window.location.hash && window.addEventListener ){
     //---------------------
 
     $('#btn-mail-meet').click(function(e){
-        // e.preventDefault();
+        e.preventDefault();
         $(this).velocity({
             left: '100%',
             duration: 500
@@ -176,7 +176,7 @@ if( !window.location.hash && window.addEventListener ){
         },{
             delay: 500
         });
-        return false;
+        console.log(e);
     });
 
     $('#btn-mail-recrut').click(function(e){
@@ -191,7 +191,6 @@ if( !window.location.hash && window.addEventListener ){
         },{
             delay: 500
         });
-        return false;
     });
 
 
@@ -313,27 +312,18 @@ if( !window.location.hash && window.addEventListener ){
         }
     });
 
-    //----------------------------
-    //Hover effect fallback on iOs
-    //----------------------------
-    $('a').on('click touchend', function(e) {
-        var el = $(this);
-        var link = el.attr('href');
-        window.location = link;
-    });
-
     //----------------------
     //Dynamic Year in Footer
     //----------------------
     $('#year').text(new Date().getFullYear());
 
-    //----------------------
-    //SVG Fallback
-    //----------------------
-    if (!Modernizr.svg) {
-      $("img[src$='.svg']")
-        .attr("src", fallback);
-    }
+    // //----------------------
+    // //SVG Fallback
+    // //----------------------
+    // if (!Modernizr.svg) {
+    //   $("img[src$='.svg']")
+    //     .attr("src", fallback);
+    // }
       
 })(jQuery);
 

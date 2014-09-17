@@ -1203,8 +1203,7 @@ hr {
   font-size: 1.3em;
   font-family: "Muli", serif;
   font-weight: 700;
-  color: #303030;
-  cursor: pointer; }
+  color: #303030; }
   @media only screen and (min-width: 851px) and (max-width: 1050px) {
     /* line 5, ../scss/modules/_btn.scss */
     .btn {
@@ -1220,7 +1219,7 @@ hr {
       margin: auto;
       font-size: 1em; } }
   @media only screen and (min-width: 1051px) and (max-width: 1250px) {
-    /* line 34, ../scss/modules/_btn.scss */
+    /* line 33, ../scss/modules/_btn.scss */
     .btn:before {
       z-index: -1;
       content: '';
@@ -1236,14 +1235,14 @@ hr {
       -o-transition: width 0.3s ease;
       transition: width 0.3s ease;
       -webkit-backface-visibility: hidden; }
-    /* line 47, ../scss/modules/_btn.scss */
+    /* line 46, ../scss/modules/_btn.scss */
     .btn:hover {
       color: white; }
-      /* line 50, ../scss/modules/_btn.scss */
+      /* line 49, ../scss/modules/_btn.scss */
       .btn:hover:before {
         width: 100%; } }
   @media only screen and (min-width: 1251px) and (max-width: 1450px) {
-    /* line 57, ../scss/modules/_btn.scss */
+    /* line 56, ../scss/modules/_btn.scss */
     .btn:before {
       z-index: -1;
       content: '';
@@ -1259,9 +1258,9 @@ hr {
       -o-transition: width 0.3s ease;
       transition: width 0.3s ease;
       -webkit-backface-visibility: hidden; }
-    /* line 70, ../scss/modules/_btn.scss */
+    /* line 69, ../scss/modules/_btn.scss */
     .btn:hover {
       color: white; }
-      /* line 73, ../scss/modules/_btn.scss */
+      /* line 72, ../scss/modules/_btn.scss */
       .btn:hover:before {
         width: 100%; } }
