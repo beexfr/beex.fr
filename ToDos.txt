@@ -1,8 +1,5 @@
-Les phrases restent si menu activé
-
 Iphone 5: Safari/Chrome (tiny)
 2 clicks needed pour les liens
-SVG non compatibles
 
 Need accès Git Beex
 
