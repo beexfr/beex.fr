@@ -165,7 +165,7 @@ if( !window.location.hash && window.addEventListener ){
     //---------------------
 
     $('#btn-mail-meet').click(function(e){
-        e.preventDefault();
+        // e.preventDefault();
         $(this).velocity({
             left: '100%',
             duration: 500
@@ -176,10 +176,11 @@ if( !window.location.hash && window.addEventListener ){
         },{
             delay: 500
         });
+        return false;
     });
 
     $('#btn-mail-recrut').click(function(e){
-        e.preventDefault();
+        // e.preventDefault();
         $(this).velocity({
             left: '100%',
             duration: 500
@@ -190,6 +191,7 @@ if( !window.location.hash && window.addEventListener ){
         },{
             delay: 500
         });
+        return false;
     });
 
 
