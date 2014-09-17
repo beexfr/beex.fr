@@ -1203,7 +1203,8 @@ hr {
   font-size: 1.3em;
   font-family: "Muli", serif;
   font-weight: 700;
-  color: #303030; }
+  color: #303030;
+  cursor: pointer; }
   @media only screen and (min-width: 851px) and (max-width: 1050px) {
     /* line 5, ../scss/modules/_btn.scss */
     .btn {
@@ -1218,7 +1219,7 @@ hr {
       width: 80%;
       margin: auto;
       font-size: 1em; } }
-  /* line 32, ../scss/modules/_btn.scss */
+  /* line 33, ../scss/modules/_btn.scss */
   .btn:before {
     z-index: -1;
     content: '';
@@ -1234,9 +1235,9 @@ hr {
     -o-transition: width 0.3s ease;
     transition: width 0.3s ease;
     -webkit-backface-visibility: hidden; }
-  /* line 45, ../scss/modules/_btn.scss */
+  /* line 46, ../scss/modules/_btn.scss */
   .btn:hover {
     color: white; }
-    /* line 48, ../scss/modules/_btn.scss */
+    /* line 49, ../scss/modules/_btn.scss */
     .btn:hover:before {
       width: 100%; }
