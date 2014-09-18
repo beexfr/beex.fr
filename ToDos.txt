@@ -1,5 +1,14 @@
-Iphone 5: Safari/Chrome (tiny)
-2 clicks needed pour les liens
+Fix a index.html
+Fix copy 
+Faire texts
+clean folder
+Fix favicon
+Fix Anim contact avec milieu viewport
+Enlever console.log sinon crash IE8
+
+
+
+
 
 Need accès Git Beex
 

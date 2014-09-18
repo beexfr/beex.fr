@@ -316,14 +316,6 @@ if( !window.location.hash && window.addEventListener ){
     //Dynamic Year in Footer
     //----------------------
     $('#year').text(new Date().getFullYear());
-
-    // //----------------------
-    // //SVG Fallback
-    // //----------------------
-    // if (!Modernizr.svg) {
-    //   $("img[src$='.svg']")
-    //     .attr("src", fallback);
-    // }
       
 })(jQuery);
 
