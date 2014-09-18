@@ -1,8 +1,6 @@
-Fix a index.html
 Fix copy 
 Faire texts
 clean folder
-Fix favicon
 Fix Anim contact avec milieu viewport
 Enlever console.log sinon crash IE8
 

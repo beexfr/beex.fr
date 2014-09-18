@@ -125,6 +125,7 @@ if( !window.location.hash && window.addEventListener ){
     var sections = [],
         id = false,
         nav = $('#nav'),
+        scrolled_id,
         links = $('a', nav);
         
 
@@ -156,7 +157,7 @@ if( !window.location.hash && window.addEventListener ){
             //Now we style the specific element which has the id previously generated
             links.removeClass('clicked');
             $('a[href="#' + id + '"]', nav).addClass('clicked');  
-            console.log('Menu change pour : ' + id);
+            // console.log('Menu change pour : ' + id);
         }
     });
 
@@ -164,34 +165,37 @@ if( !window.location.hash && window.addEventListener ){
     //Button Mail Animation
     //---------------------
 
-    $('#btn-mail-meet').click(function(e){
-        e.preventDefault();
-        $(this).velocity({
-            left: '100%',
-            duration: 500
+    //Enable the copy function only in desktop mode since flash isn't supported on mobile anymore
+    if ($(window).width() > 1050) {
+        $('#btn-mail-meet').add('#btn-mail-recrut').attr("href", "#");
+        $('#btn-mail-meet').click(function(e){
+            $(this).attr("href", this.href + "#").velocity({
+                left: '100%',
+                duration: 500
+            });
+            $('#new-btn-wrapper-meet').velocity({
+                right: '0%',
+                duration: 500
+            },{
+                delay: 500
+            });
         });
-        $('#new-btn-wrapper-meet').velocity({
-            right: '0%',
-            duration: 500
-        },{
-            delay: 500
-        });
-        console.log(e);
-    });
 
-    $('#btn-mail-recrut').click(function(e){
-        // e.preventDefault();
-        $(this).velocity({
-            left: '100%',
-            duration: 500
+        $('#btn-mail-recrut').click(function(e){
+            $(this).velocity({
+                left: '100%',
+                duration: 500
+            });
+            $('#new-btn-wrapper-recrut').velocity({
+                right: '0%',
+                duration: 500
+            },{
+                delay: 500
+            });
+            return false;
         });
-        $('#new-btn-wrapper-recrut').velocity({
-            right: '0%',
-            duration: 500
-        },{
-            delay: 500
-        });
-    });
+    }
+    
 
 
 
@@ -245,7 +249,7 @@ if( !window.location.hash && window.addEventListener ){
     //Copy To Clipboard
     //-----------------
     var path_swf = 'src/flash/jquery.clipboard.swf';
-    console.log($('#btn-mail-recrut').text());
+    // console.log($('#btn-mail-recrut').text());
 
     $('#copy-meet').clipboard({
         path: path_swf,
@@ -310,6 +314,14 @@ if( !window.location.hash && window.addEventListener ){
           $('#icon').removeClass('menu-open');
           $('#filter').removeClass('filter-on');
         }
+    });
+
+    //----------------------
+    //Home Link Back To Top
+    //----------------------
+    $('#link-home').click(function(e) {
+        $("html").velocity("scroll", { offset: "0", duration: 500 });
+        return false;
     });
 
     //----------------------
