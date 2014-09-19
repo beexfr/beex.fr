@@ -19,24 +19,24 @@ gulp.task('html', function(){
     .pipe(gulp.dest('dist/'));
 });
 
-gulp.task('imagemin', function(){
-	return gulp.src('src/img/**/*')
-	.pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
-	.pipe(gulp.dest('dist/src/img'))
-});
+// gulp.task('imagemin', function(){
+// 	return gulp.src('src/img/**/*')
+// 	.pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
+// 	.pipe(gulp.dest('dist/src/img'))
+// });
 
 gulp.task('clean', function() {
   return gulp.src(['src/css/', 'src/js/', 'src/img/'], {read: false})
 	.pipe(clean());
 });
 
-// gulp.task('watch',function(){
-// 	gulp.watch('src/js/*.js', ['scripts']).on('change', function(e){
-// 		console.log('Le fichier ' + e.path + ' a ete modifie');
-// 	})
-// 	gulp.watch('src/css/*.css', ['css'])
-// });
+gulp.task('watch',function(){
+	gulp.watch('src/js/*.js', ['scripts']).on('change', function(e){
+		console.log('Le fichier ' + e.path + ' a ete modifie');
+	})
+	gulp.watch('src/css/*.css', ['css'])
+});
 
 //Default Task
-gulp.task('default', ['html','imagemin','watch']);
+gulp.task('default', ['html','watch']);
 
