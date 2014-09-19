@@ -30,12 +30,12 @@ gulp.task('clean', function() {
 	.pipe(clean());
 });
 
-gulp.task('watch',function(){
-	gulp.watch('src/js/*.js', ['scripts']).on('change', function(e){
-		console.log('Le fichier ' + e.path + ' a ete modifie');
-	})
-	gulp.watch('src/css/*.css', ['css'])
-});
+// gulp.task('watch',function(){
+// 	gulp.watch('src/js/*.js', ['scripts']).on('change', function(e){
+// 		console.log('Le fichier ' + e.path + ' a ete modifie');
+// 	})
+// 	gulp.watch('src/css/*.css', ['css'])
+// });
 
 //Default Task
 gulp.task('default', ['html','imagemin','watch']);

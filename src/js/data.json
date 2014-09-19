@@ -1,44 +1,44 @@
 {  
    "sentences":[  
       {  
-         "title":"Chez Beex nous créons",
+         "title":"Nous créons",
          "texts":[  
             {  
-               "text":"des supers programmes"
+               "text":"de supers applications!"
             },
             {  
-               "text":"la mégadonnée"
+               "text":"des services personnalisés."
             },
             {  
-               "text":"le monde de demain"
+               "text":"des accélérateurs d'activité."
             }
          ]
       },
       {  
-         "title":"Chez Beex nous aimons",
+         "title":"Nous développons",
          "texts":[  
             {  
-               "text":"la big data"
+               "text":"des solutions parfaitement adaptées."
             },
             {  
-               "text":"développer des applications ergonomiques, simples et sur mesure"
+               "text":"des applications ergonomiques, réactives et sur-mesure."
             },
             {  
-               "text":"chorégraphier des services et orchestrer de la donnée"
+               "text":"avec souplesse et agilité."
             }
          ]
       },
       {  
-         "title":"Chez Beex nous mangeons",
+         "title":"Nous aimons",
          "texts":[  
             {  
-               "text":"des prunes"
+               "text":"le big data"
             },
             {  
-               "text":"des ananas"
+               "text":"écouter vos problématiques."
             },
             {  
-               "text":"des bonbons"
+               "text":"chorégraphier des services et orchestrer de la donnée."
             }
          ]
       }
